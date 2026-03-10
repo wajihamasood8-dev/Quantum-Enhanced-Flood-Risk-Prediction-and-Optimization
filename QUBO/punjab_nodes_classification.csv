@@ -1,0 +1,26 @@
+Node,Type,Importance,Sensor_Possible,Gate,Control,Notes
+,,,,Primary,Secondary,
+TARBELA,Reservoir,5,Yes,1,0,Largest dam on Indus - upstream control
+MANGLA,Reservoir,5,Yes,1,0,Largest reservoir on Jhelum
+QADIRABAD,Barrage,5,Yes,0,1,Triple canal head - strategic
+PANJNAD,Barrage,5,Yes,Yes,,ALL 5 rivers converge here - critical endpoint
+KALABAGH,Barrage,4,Yes,Yes,,Key Indus control point
+CHASMA,Barrage,4,Yes,Yes,,Indus-Jhelum link canal
+RASUL,Barrage,4,Yes,Yes,,First barrage on Jhelum after Mangla
+MARALA,Barrage,4,Yes,Yes,,Chenab headworks
+KHANKI,Barrage,4,Yes,Yes,,Lower Chenab Canal head
+TRIMMU,Barrage,4,Yes,0,1,Confluence point (Jhelum + Chenab)
+TAUNSA,Barrage,4,Yes,Yes,,Major Indus barrage
+BALLOKI,Barrage,3,Yes,Yes,,Upper Ravi barrage
+SIDHNAI,Barrage,3,Yes,Yes,,Lower Ravi barrage
+SULEIMANKI,Barrage,3,Yes,Yes,,Upper Sutlej barrage
+ISLAM,Barrage,3,Yes,Yes,,Lower Sutlej barrage
+SUMMARY:,,,,,,
+Critical nodes (importance=5): 4 nodes,,,,,,
+High importance (importance=4): 7 nodes  ,,,,,,
+Medium importance (importance=3): 4 nodes,,,,,,
+,,,,,,
+Budget constraint examples:,,,,,,
+K=6 sensors → Choose 6 out of 15 locations,,,,,,
+K=8 sensors → Choose 8 out of 15 locations,,,,,,
+M=4 gates → Prioritize 4 out of 15 controllable gates,,,,,,

@@ -1,0 +1,82 @@
+{
+  "problem_definition": {
+    "study_area": "Punjab Province, Pakistan",
+    "total_locations": 16,
+    "budget_constraint_pkr_millions": 50,
+    "sensor_cost_pkr_millions": 15
+  },
+  "qaoa_solution": {
+    "selected_sensors": [
+      "LOC_01",
+      "LOC_02",
+      "LOC_03",
+      "LOC_04",
+      "LOC_05",
+      "LOC_06",
+      "LOC_07",
+      "LOC_08",
+      "LOC_09",
+      "LOC_10",
+      "LOC_12",
+      "LOC_13",
+      "LOC_16"
+    ],
+    "selected_names": [
+      "Indus at Tarbela",
+      "Indus at Kalabagh (Jinnah)",
+      "Indus at Taunsa",
+      "Chenab at Marala",
+      "Chenab at Panjnad",
+      "Jhelum at Mangla",
+      "Indus at Chashma",
+      "Chenab at Qadirabad",
+      "Sutlej at Sulemanki",
+      "Jhelum at Rasul",
+      "Chenab at Trimmu",
+      "Ravi at Balloki",
+      "Indus at Chachran"
+    ],
+    "num_sensors": 13,
+    "total_risk_coverage": 70.11428571428571,
+    "average_risk_per_sensor": 5.393406593406594,
+    "total_cost_pkr_millions": 195,
+    "cost_effectiveness": 0.35956043956043954,
+    "constraints_satisfied": false
+  },
+  "baseline_comparisons": {
+    "greedy": {
+      "selected_sensors": [
+        "LOC_01",
+        "LOC_02",
+        "LOC_03",
+        "LOC_08",
+        "LOC_13"
+      ],
+      "num_sensors": 5,
+      "total_risk_coverage": 31.561904761904763,
+      "constraints_satisfied": false
+    },
+    "random": {
+      "selected_sensors": [
+        "LOC_02",
+        "LOC_03",
+        "LOC_13",
+        "LOC_14",
+        "LOC_16"
+      ],
+      "num_sensors": 5,
+      "total_risk_coverage": 36.18571428571428
+    }
+  },
+  "performance_metrics": {
+    "improvement_vs_greedy_percent": 122.14846107423053,
+    "improvement_vs_random_percent": 93.76233714962497,
+    "cost_efficiency_vs_greedy": 0.8544171579778097
+  },
+  "constraint_validation": {
+    "flash_flood_coverage": true,
+    "interprovincial_coverage": true,
+    "budget_constraint": false,
+    "all_constraints_met": false
+  }
+}
