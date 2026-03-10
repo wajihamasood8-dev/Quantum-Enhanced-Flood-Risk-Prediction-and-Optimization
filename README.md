@@ -108,31 +108,51 @@ A **Quantum Neural Network (QNN)** trained on sparse historical flood records en
 ```
 QFlood-Protectors/
 │
-├── 📁 data/
-│   ├── punjab_flood_correlation_matrix.csv   # Inter-station flood correlations
-│   └── historical_flood_data.csv             # Rainfall, river levels, flood events
+├── 📁 datasets/
+│   ├── Flood years.docx
+│   ├── Pakistan River Inflow & Outflow (1950-2025).docx
+│   ├── pakistan_weather_2000_2024.csv
+│   └── punjab_updated.json             # Datasets for Punjab
 │
-├── 📁 ising/
-│   ├── hamiltonian.py                        # Ising Hamiltonian construction from correlation matrix
-│   └── correlation_analysis.py              # Punjab flood correlation matrix derivation
+├── 📁 Flood Prediction/
+│   ├── Datasets
+│   ├── QML VSC 
+│   ├── punjab_qml_enhanced.json                     
+│   ├── qml_flood_predictor.py
+│   └── qml_training_data.json             
 │
-├── 📁 qaoa/
-│   ├── sensor_placement.py                  # QAOA circuit for optimal sensor placement
-│   └── cost_function.py                     # Ising cost Hamiltonian → QAOA encoding
+├── 📁 QUBO/
+│   ├── Flood Problem.ipynb        # QAOA circuit for optimal sensor placement
+│   └── qaoa_results_complete.json                   # Complete results
 │
-├── 📁 qnn/
-│   ├── flood_forecasting.py                 # QNN architecture and training
-│   ├── feature_encoding.py                  # Classical → quantum data encoding
-│   └── benchmarking.py                      # QNN vs classical model comparison
+├── 📁 theory/
+│   ├── Flood Problem.ipynb               
+│   ├── Flood Problem.pdf                  
+│   └── Quantum inspired Flood dynamics     
 │
-├── 📁 notebooks/
-│   ├── 01_correlation_matrix.ipynb          # Exploratory analysis of flood correlations
-│   ├── 02_ising_formulation.ipynb           # Hamiltonian construction walkthrough
-│   ├── 03_qaoa_optimization.ipynb           # Sensor placement optimization
-│   └── 04_qnn_prediction.ipynb              # Flood forecasting experiments
+├── 📁 NDMA reports/
+│   ├── A Comprehensive Study of Flood Events in Pakistan (1950-2025) NDMA Report.pdf     
+│   ├── Assessing Impacts of Flood in Pakistan (2010-2024) NDMA Report.pdf
+│   ├── Comprehensive Review of Monsoon 2024.pdf
+│   ├── NDMA Annual Report (2007-8).pdf
+│   ├── NDMA Annual Report (2009).pdf
+│   ├── NDMA Annual Report (2010).pdf
+│   ├── NDMA Annual Report (2012).pdf
+│   ├── NDMA Annual Report (2013).pdf
+│   ├── NDMA Annual Report (2014).pdf
+│   ├── NDMA Annual Report (2015).pdf
+│   ├── NDMA Annual Report (2016).pdf
+│   ├── NDMA Annual Report (2017).pdf
+│   ├── NDMA Annual Report (2018).pdf
+│   ├── NDMA Annual Report (2019).pdf
+│   ├── NDMA Annual Report (2020).pdf
+│   ├── NDMA Annual Report (2021).pdf
+│   ├── NDMA Annual Report (2022).pdf
+│   ├── NDMA Annual Report (2024).pdf
+│   └── NDMA Post Annual Report (2024).pdf
 │
 ├── 📁 results/
-│   ├── optimal_sensor_map.png               # Visualised optimal placement
+│   ├── optimal_sensor_results.png          
 │   └── qnn_benchmark_results.png            # QNN vs classical comparison plots
 │
 ├── requirements.txt
