@@ -1,0 +1,5279 @@
+{
+  "dataset_info": {
+    "name": "Punjab Flood QML Training Dataset (Synthetic)",
+    "purpose": "Quantum kernel classification for flood risk prediction",
+    "generation_method": "Synthetic data with realistic hydro-meteorological feature distributions",
+    "total_samples": 291,
+    "flood_samples": 97,
+    "no_flood_samples": 194,
+    "locations_covered": 16,
+    "temporal_coverage": "2000-2024",
+    "feature_count": 7
+  },
+  "features_description": {
+    "prcp_3day_avg_mm": "3-day rolling average precipitation (mm)",
+    "prcp_7day_cumulative_mm": "7-day cumulative precipitation (mm)",
+    "upstream_discharge_m3s": "Estimated upstream river discharge (m\u00b3/s)",
+    "soil_saturation_index": "Soil moisture saturation index (0-1)",
+    "humidity_avg_pct": "Average relative humidity (%)",
+    "temp_range_c": "Daily temperature range (\u00b0C)",
+    "antecedent_moisture_index": "Pre-event soil moisture index (0-1)"
+  },
+  "quantum_ml_config": {
+    "task": "binary_classification",
+    "target": "flood / no_flood",
+    "quantum_advantage_hypothesis": "Nonlinear decision boundaries in 7D feature space better captured by quantum kernel",
+    "recommended_approach": {
+      "method": "Quantum Kernel SVM",
+      "feature_map": "ZZFeatureMap",
+      "circuit_reps": 2,
+      "entanglement": "linear",
+      "classical_baseline": "RBF kernel SVM"
+    },
+    "expected_performance": {
+      "classical_accuracy": "~82-88%",
+      "quantum_target": ">90%",
+      "key_metric": "precision on flood class (minimize false negatives)"
+    }
+  },
+  "training_samples": [
+    {
+      "sample_id": "TRAIN_0001",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2020-07-01",
+      "features": {
+        "prcp_3day_avg_mm": 288.49,
+        "prcp_7day_cumulative_mm": 1106.91,
+        "upstream_discharge_m3s": 27604.6,
+        "soil_saturation_index": 0.774,
+        "humidity_avg_pct": 79.9,
+        "temp_range_c": 13.9,
+        "antecedent_moisture_index": 0.222
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0002",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2011-07-17",
+      "features": {
+        "prcp_3day_avg_mm": 255.28,
+        "prcp_7day_cumulative_mm": 864.72,
+        "upstream_discharge_m3s": 36206.8,
+        "soil_saturation_index": 0.911,
+        "humidity_avg_pct": 86.2,
+        "temp_range_c": 10.8,
+        "antecedent_moisture_index": 0.809
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0003",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2020-08-11",
+      "features": {
+        "prcp_3day_avg_mm": 178.13,
+        "prcp_7day_cumulative_mm": 593.52,
+        "upstream_discharge_m3s": 32037.1,
+        "soil_saturation_index": 0.774,
+        "humidity_avg_pct": 79.3,
+        "temp_range_c": 11.4,
+        "antecedent_moisture_index": 0.385
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0004",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2020-08-18",
+      "features": {
+        "prcp_3day_avg_mm": 141.71,
+        "prcp_7day_cumulative_mm": 521.5,
+        "upstream_discharge_m3s": 38057.0,
+        "soil_saturation_index": 0.817,
+        "humidity_avg_pct": 93.4,
+        "temp_range_c": 11.6,
+        "antecedent_moisture_index": 0.335
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0005",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2010-04-25",
+      "features": {
+        "prcp_3day_avg_mm": 11.58,
+        "prcp_7day_cumulative_mm": 36.92,
+        "upstream_discharge_m3s": 7202.3,
+        "soil_saturation_index": 0.19,
+        "humidity_avg_pct": 42.4,
+        "temp_range_c": 11.6,
+        "antecedent_moisture_index": 0.211
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0006",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2011-05-23",
+      "features": {
+        "prcp_3day_avg_mm": 37.47,
+        "prcp_7day_cumulative_mm": 143.15,
+        "upstream_discharge_m3s": 4376.5,
+        "soil_saturation_index": 0.218,
+        "humidity_avg_pct": 59.4,
+        "temp_range_c": 11.8,
+        "antecedent_moisture_index": 0.397
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0007",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2019-04-22",
+      "features": {
+        "prcp_3day_avg_mm": 12.97,
+        "prcp_7day_cumulative_mm": 50.94,
+        "upstream_discharge_m3s": 4213.6,
+        "soil_saturation_index": 0.479,
+        "humidity_avg_pct": 63.0,
+        "temp_range_c": 8.7,
+        "antecedent_moisture_index": 0.374
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0008",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2009-04-21",
+      "features": {
+        "prcp_3day_avg_mm": 19.97,
+        "prcp_7day_cumulative_mm": 59.82,
+        "upstream_discharge_m3s": 11670.6,
+        "soil_saturation_index": 0.207,
+        "humidity_avg_pct": 66.5,
+        "temp_range_c": 13.4,
+        "antecedent_moisture_index": 0.324
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0009",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2021-07-12",
+      "features": {
+        "prcp_3day_avg_mm": 12.28,
+        "prcp_7day_cumulative_mm": 35.2,
+        "upstream_discharge_m3s": 3448.5,
+        "soil_saturation_index": 0.186,
+        "humidity_avg_pct": 69.9,
+        "temp_range_c": 14.3,
+        "antecedent_moisture_index": 0.338
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0010",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2021-02-13",
+      "features": {
+        "prcp_3day_avg_mm": 15.26,
+        "prcp_7day_cumulative_mm": 61.14,
+        "upstream_discharge_m3s": 2392.9,
+        "soil_saturation_index": 0.538,
+        "humidity_avg_pct": 69.9,
+        "temp_range_c": 15.2,
+        "antecedent_moisture_index": 0.305
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0011",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2007-11-11",
+      "features": {
+        "prcp_3day_avg_mm": 4.46,
+        "prcp_7day_cumulative_mm": 17.97,
+        "upstream_discharge_m3s": 4925.3,
+        "soil_saturation_index": 0.532,
+        "humidity_avg_pct": 53.0,
+        "temp_range_c": 13.0,
+        "antecedent_moisture_index": 0.154
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0012",
+      "location_id": "LOC_01",
+      "location_name": "Indus at Tarbela",
+      "date": "2010-05-27",
+      "features": {
+        "prcp_3day_avg_mm": 25.56,
+        "prcp_7day_cumulative_mm": 90.86,
+        "upstream_discharge_m3s": 7722.2,
+        "soil_saturation_index": 0.455,
+        "humidity_avg_pct": 58.3,
+        "temp_range_c": 13.3,
+        "antecedent_moisture_index": 0.1
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0013",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2012-08-01",
+      "features": {
+        "prcp_3day_avg_mm": 138.62,
+        "prcp_7day_cumulative_mm": 434.62,
+        "upstream_discharge_m3s": 28446.3,
+        "soil_saturation_index": 0.936,
+        "humidity_avg_pct": 82.3,
+        "temp_range_c": 13.7,
+        "antecedent_moisture_index": 0.255
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0014",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2014-07-25",
+      "features": {
+        "prcp_3day_avg_mm": 238.78,
+        "prcp_7day_cumulative_mm": 723.8,
+        "upstream_discharge_m3s": 39252.1,
+        "soil_saturation_index": 0.968,
+        "humidity_avg_pct": 77.5,
+        "temp_range_c": 14.1,
+        "antecedent_moisture_index": 0.875
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0015",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2022-09-23",
+      "features": {
+        "prcp_3day_avg_mm": 159.87,
+        "prcp_7day_cumulative_mm": 545.7,
+        "upstream_discharge_m3s": 46529.3,
+        "soil_saturation_index": 0.899,
+        "humidity_avg_pct": 81.2,
+        "temp_range_c": 9.2,
+        "antecedent_moisture_index": 0.357
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0016",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2010-09-18",
+      "features": {
+        "prcp_3day_avg_mm": 166.77,
+        "prcp_7day_cumulative_mm": 520.4,
+        "upstream_discharge_m3s": 38476.7,
+        "soil_saturation_index": 0.895,
+        "humidity_avg_pct": 79.4,
+        "temp_range_c": 16.6,
+        "antecedent_moisture_index": 0.25
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0017",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2012-09-16",
+      "features": {
+        "prcp_3day_avg_mm": 162.99,
+        "prcp_7day_cumulative_mm": 564.22,
+        "upstream_discharge_m3s": 61936.7,
+        "soil_saturation_index": 0.881,
+        "humidity_avg_pct": 77.6,
+        "temp_range_c": 16.1,
+        "antecedent_moisture_index": 0.333
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0018",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2020-08-12",
+      "features": {
+        "prcp_3day_avg_mm": 212.81,
+        "prcp_7day_cumulative_mm": 889.09,
+        "upstream_discharge_m3s": 16769.6,
+        "soil_saturation_index": 0.905,
+        "humidity_avg_pct": 84.3,
+        "temp_range_c": 12.0,
+        "antecedent_moisture_index": 0.438
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0019",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2005-04-18",
+      "features": {
+        "prcp_3day_avg_mm": 17.94,
+        "prcp_7day_cumulative_mm": 73.44,
+        "upstream_discharge_m3s": 5810.5,
+        "soil_saturation_index": 0.25,
+        "humidity_avg_pct": 52.7,
+        "temp_range_c": 16.6,
+        "antecedent_moisture_index": 0.265
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0020",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2010-09-27",
+      "features": {
+        "prcp_3day_avg_mm": 0.83,
+        "prcp_7day_cumulative_mm": 2.78,
+        "upstream_discharge_m3s": 9101.2,
+        "soil_saturation_index": 0.245,
+        "humidity_avg_pct": 42.8,
+        "temp_range_c": 16.6,
+        "antecedent_moisture_index": 0.371
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0021",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2013-01-13",
+      "features": {
+        "prcp_3day_avg_mm": 10.61,
+        "prcp_7day_cumulative_mm": 43.92,
+        "upstream_discharge_m3s": 12720.0,
+        "soil_saturation_index": 0.319,
+        "humidity_avg_pct": 63.5,
+        "temp_range_c": 13.6,
+        "antecedent_moisture_index": 0.316
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0022",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2005-05-07",
+      "features": {
+        "prcp_3day_avg_mm": 38.75,
+        "prcp_7day_cumulative_mm": 111.6,
+        "upstream_discharge_m3s": 8966.3,
+        "soil_saturation_index": 0.449,
+        "humidity_avg_pct": 57.4,
+        "temp_range_c": 13.0,
+        "antecedent_moisture_index": 0.356
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0023",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2000-09-03",
+      "features": {
+        "prcp_3day_avg_mm": 47.68,
+        "prcp_7day_cumulative_mm": 160.44,
+        "upstream_discharge_m3s": 8126.4,
+        "soil_saturation_index": 0.495,
+        "humidity_avg_pct": 42.1,
+        "temp_range_c": 13.7,
+        "antecedent_moisture_index": 0.274
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0024",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2021-02-14",
+      "features": {
+        "prcp_3day_avg_mm": 26.29,
+        "prcp_7day_cumulative_mm": 98.28,
+        "upstream_discharge_m3s": 4822.5,
+        "soil_saturation_index": 0.254,
+        "humidity_avg_pct": 57.0,
+        "temp_range_c": 10.7,
+        "antecedent_moisture_index": 0.139
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0025",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2007-08-11",
+      "features": {
+        "prcp_3day_avg_mm": 52.03,
+        "prcp_7day_cumulative_mm": 186.68,
+        "upstream_discharge_m3s": 1975.3,
+        "soil_saturation_index": 0.398,
+        "humidity_avg_pct": 68.1,
+        "temp_range_c": 13.4,
+        "antecedent_moisture_index": 0.252
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0026",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2009-02-08",
+      "features": {
+        "prcp_3day_avg_mm": 14.78,
+        "prcp_7day_cumulative_mm": 54.04,
+        "upstream_discharge_m3s": 16724.6,
+        "soil_saturation_index": 0.431,
+        "humidity_avg_pct": 44.7,
+        "temp_range_c": 14.5,
+        "antecedent_moisture_index": 0.102
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0027",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2019-05-22",
+      "features": {
+        "prcp_3day_avg_mm": 4.14,
+        "prcp_7day_cumulative_mm": 15.91,
+        "upstream_discharge_m3s": 3165.8,
+        "soil_saturation_index": 0.506,
+        "humidity_avg_pct": 66.3,
+        "temp_range_c": 10.8,
+        "antecedent_moisture_index": 0.163
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0028",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2005-11-21",
+      "features": {
+        "prcp_3day_avg_mm": 34.12,
+        "prcp_7day_cumulative_mm": 97.95,
+        "upstream_discharge_m3s": 7329.4,
+        "soil_saturation_index": 0.513,
+        "humidity_avg_pct": 55.2,
+        "temp_range_c": 16.3,
+        "antecedent_moisture_index": 0.113
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0029",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2003-11-09",
+      "features": {
+        "prcp_3day_avg_mm": 6.46,
+        "prcp_7day_cumulative_mm": 19.11,
+        "upstream_discharge_m3s": 14795.9,
+        "soil_saturation_index": 0.374,
+        "humidity_avg_pct": 53.3,
+        "temp_range_c": 14.9,
+        "antecedent_moisture_index": 0.145
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0030",
+      "location_id": "LOC_02",
+      "location_name": "Indus at Kalabagh (Jinnah)",
+      "date": "2009-10-18",
+      "features": {
+        "prcp_3day_avg_mm": 5.92,
+        "prcp_7day_cumulative_mm": 23.19,
+        "upstream_discharge_m3s": 9870.0,
+        "soil_saturation_index": 0.51,
+        "humidity_avg_pct": 43.8,
+        "temp_range_c": 17.0,
+        "antecedent_moisture_index": 0.163
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0031",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2011-09-04",
+      "features": {
+        "prcp_3day_avg_mm": 196.18,
+        "prcp_7day_cumulative_mm": 755.13,
+        "upstream_discharge_m3s": 68590.7,
+        "soil_saturation_index": 0.974,
+        "humidity_avg_pct": 86.2,
+        "temp_range_c": 10.4,
+        "antecedent_moisture_index": 0.314
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0032",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2014-07-06",
+      "features": {
+        "prcp_3day_avg_mm": 287.3,
+        "prcp_7day_cumulative_mm": 1151.99,
+        "upstream_discharge_m3s": 63426.1,
+        "soil_saturation_index": 0.935,
+        "humidity_avg_pct": 81.6,
+        "temp_range_c": 10.7,
+        "antecedent_moisture_index": 0.751
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0033",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2014-07-28",
+      "features": {
+        "prcp_3day_avg_mm": 224.02,
+        "prcp_7day_cumulative_mm": 884.62,
+        "upstream_discharge_m3s": 66796.7,
+        "soil_saturation_index": 0.83,
+        "humidity_avg_pct": 79.0,
+        "temp_range_c": 10.2,
+        "antecedent_moisture_index": 0.662
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0034",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2012-08-28",
+      "features": {
+        "prcp_3day_avg_mm": 128.52,
+        "prcp_7day_cumulative_mm": 482.13,
+        "upstream_discharge_m3s": 45829.5,
+        "soil_saturation_index": 0.867,
+        "humidity_avg_pct": 90.5,
+        "temp_range_c": 11.3,
+        "antecedent_moisture_index": 0.219
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0035",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2011-09-09",
+      "features": {
+        "prcp_3day_avg_mm": 121.11,
+        "prcp_7day_cumulative_mm": 413.08,
+        "upstream_discharge_m3s": 51792.4,
+        "soil_saturation_index": 0.931,
+        "humidity_avg_pct": 86.9,
+        "temp_range_c": 9.2,
+        "antecedent_moisture_index": 0.83
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0036",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2012-07-23",
+      "features": {
+        "prcp_3day_avg_mm": 215.78,
+        "prcp_7day_cumulative_mm": 888.24,
+        "upstream_discharge_m3s": 55015.0,
+        "soil_saturation_index": 0.908,
+        "humidity_avg_pct": 85.4,
+        "temp_range_c": 10.0,
+        "antecedent_moisture_index": 0.502
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0037",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2012-09-11",
+      "features": {
+        "prcp_3day_avg_mm": 269.89,
+        "prcp_7day_cumulative_mm": 1007.66,
+        "upstream_discharge_m3s": 32492.6,
+        "soil_saturation_index": 0.867,
+        "humidity_avg_pct": 77.5,
+        "temp_range_c": 15.0,
+        "antecedent_moisture_index": 0.588
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0038",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2014-09-13",
+      "features": {
+        "prcp_3day_avg_mm": 273.2,
+        "prcp_7day_cumulative_mm": 974.54,
+        "upstream_discharge_m3s": 10522.2,
+        "soil_saturation_index": 0.819,
+        "humidity_avg_pct": 93.1,
+        "temp_range_c": 10.9,
+        "antecedent_moisture_index": 0.501
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0039",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2015-06-15",
+      "features": {
+        "prcp_3day_avg_mm": 17.67,
+        "prcp_7day_cumulative_mm": 73.23,
+        "upstream_discharge_m3s": 10437.5,
+        "soil_saturation_index": 0.467,
+        "humidity_avg_pct": 60.3,
+        "temp_range_c": 14.6,
+        "antecedent_moisture_index": 0.185
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0040",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2020-10-11",
+      "features": {
+        "prcp_3day_avg_mm": 3.74,
+        "prcp_7day_cumulative_mm": 14.68,
+        "upstream_discharge_m3s": 3000.2,
+        "soil_saturation_index": 0.274,
+        "humidity_avg_pct": 68.6,
+        "temp_range_c": 8.5,
+        "antecedent_moisture_index": 0.395
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0041",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2001-08-14",
+      "features": {
+        "prcp_3day_avg_mm": 49.62,
+        "prcp_7day_cumulative_mm": 166.71,
+        "upstream_discharge_m3s": 4531.3,
+        "soil_saturation_index": 0.304,
+        "humidity_avg_pct": 57.3,
+        "temp_range_c": 14.9,
+        "antecedent_moisture_index": 0.368
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0042",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2001-07-08",
+      "features": {
+        "prcp_3day_avg_mm": 9.85,
+        "prcp_7day_cumulative_mm": 31.02,
+        "upstream_discharge_m3s": 11755.4,
+        "soil_saturation_index": 0.17,
+        "humidity_avg_pct": 68.7,
+        "temp_range_c": 12.6,
+        "antecedent_moisture_index": 0.34
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0043",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2019-09-20",
+      "features": {
+        "prcp_3day_avg_mm": 17.77,
+        "prcp_7day_cumulative_mm": 71.94,
+        "upstream_discharge_m3s": 6598.0,
+        "soil_saturation_index": 0.476,
+        "humidity_avg_pct": 62.7,
+        "temp_range_c": 17.1,
+        "antecedent_moisture_index": 0.234
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0044",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2017-08-09",
+      "features": {
+        "prcp_3day_avg_mm": 42.1,
+        "prcp_7day_cumulative_mm": 146.44,
+        "upstream_discharge_m3s": 3963.5,
+        "soil_saturation_index": 0.461,
+        "humidity_avg_pct": 65.2,
+        "temp_range_c": 12.4,
+        "antecedent_moisture_index": 0.314
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0045",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2007-06-11",
+      "features": {
+        "prcp_3day_avg_mm": 35.72,
+        "prcp_7day_cumulative_mm": 107.66,
+        "upstream_discharge_m3s": 3258.9,
+        "soil_saturation_index": 0.303,
+        "humidity_avg_pct": 42.4,
+        "temp_range_c": 12.1,
+        "antecedent_moisture_index": 0.199
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0046",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2013-01-07",
+      "features": {
+        "prcp_3day_avg_mm": 33.32,
+        "prcp_7day_cumulative_mm": 94.19,
+        "upstream_discharge_m3s": 14594.4,
+        "soil_saturation_index": 0.528,
+        "humidity_avg_pct": 51.7,
+        "temp_range_c": 13.8,
+        "antecedent_moisture_index": 0.243
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0047",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2007-07-28",
+      "features": {
+        "prcp_3day_avg_mm": 49.93,
+        "prcp_7day_cumulative_mm": 195.72,
+        "upstream_discharge_m3s": 12512.6,
+        "soil_saturation_index": 0.444,
+        "humidity_avg_pct": 65.1,
+        "temp_range_c": 12.9,
+        "antecedent_moisture_index": 0.182
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0048",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2000-07-11",
+      "features": {
+        "prcp_3day_avg_mm": 37.46,
+        "prcp_7day_cumulative_mm": 153.1,
+        "upstream_discharge_m3s": 15455.7,
+        "soil_saturation_index": 0.486,
+        "humidity_avg_pct": 63.9,
+        "temp_range_c": 13.3,
+        "antecedent_moisture_index": 0.372
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0049",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2021-11-01",
+      "features": {
+        "prcp_3day_avg_mm": 3.36,
+        "prcp_7day_cumulative_mm": 10.63,
+        "upstream_discharge_m3s": 7587.7,
+        "soil_saturation_index": 0.223,
+        "humidity_avg_pct": 52.9,
+        "temp_range_c": 12.5,
+        "antecedent_moisture_index": 0.201
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0050",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2007-07-09",
+      "features": {
+        "prcp_3day_avg_mm": 46.76,
+        "prcp_7day_cumulative_mm": 193.22,
+        "upstream_discharge_m3s": 5649.0,
+        "soil_saturation_index": 0.171,
+        "humidity_avg_pct": 54.1,
+        "temp_range_c": 8.7,
+        "antecedent_moisture_index": 0.387
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0051",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2000-04-07",
+      "features": {
+        "prcp_3day_avg_mm": 33.57,
+        "prcp_7day_cumulative_mm": 99.37,
+        "upstream_discharge_m3s": 9951.9,
+        "soil_saturation_index": 0.339,
+        "humidity_avg_pct": 58.6,
+        "temp_range_c": 12.7,
+        "antecedent_moisture_index": 0.177
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0052",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2003-10-20",
+      "features": {
+        "prcp_3day_avg_mm": 38.55,
+        "prcp_7day_cumulative_mm": 124.72,
+        "upstream_discharge_m3s": 10572.9,
+        "soil_saturation_index": 0.216,
+        "humidity_avg_pct": 61.6,
+        "temp_range_c": 17.3,
+        "antecedent_moisture_index": 0.273
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0053",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2013-12-07",
+      "features": {
+        "prcp_3day_avg_mm": 3.04,
+        "prcp_7day_cumulative_mm": 11.8,
+        "upstream_discharge_m3s": 12821.9,
+        "soil_saturation_index": 0.191,
+        "humidity_avg_pct": 60.7,
+        "temp_range_c": 14.0,
+        "antecedent_moisture_index": 0.136
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0054",
+      "location_id": "LOC_03",
+      "location_name": "Indus at Taunsa",
+      "date": "2000-06-18",
+      "features": {
+        "prcp_3day_avg_mm": 17.14,
+        "prcp_7day_cumulative_mm": 68.36,
+        "upstream_discharge_m3s": 11352.2,
+        "soil_saturation_index": 0.286,
+        "humidity_avg_pct": 51.1,
+        "temp_range_c": 9.1,
+        "antecedent_moisture_index": 0.388
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0055",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2020-08-23",
+      "features": {
+        "prcp_3day_avg_mm": 148.41,
+        "prcp_7day_cumulative_mm": 543.53,
+        "upstream_discharge_m3s": 55372.7,
+        "soil_saturation_index": 0.9,
+        "humidity_avg_pct": 78.5,
+        "temp_range_c": 15.7,
+        "antecedent_moisture_index": 0.525
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0056",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2015-08-11",
+      "features": {
+        "prcp_3day_avg_mm": 314.71,
+        "prcp_7day_cumulative_mm": 988.63,
+        "upstream_discharge_m3s": 23475.2,
+        "soil_saturation_index": 0.953,
+        "humidity_avg_pct": 91.6,
+        "temp_range_c": 14.1,
+        "antecedent_moisture_index": 0.465
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0057",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2014-08-06",
+      "features": {
+        "prcp_3day_avg_mm": 228.04,
+        "prcp_7day_cumulative_mm": 828.83,
+        "upstream_discharge_m3s": 44172.6,
+        "soil_saturation_index": 0.814,
+        "humidity_avg_pct": 82.1,
+        "temp_range_c": 13.6,
+        "antecedent_moisture_index": 0.562
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0058",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2010-07-24",
+      "features": {
+        "prcp_3day_avg_mm": 208.73,
+        "prcp_7day_cumulative_mm": 792.46,
+        "upstream_discharge_m3s": 26128.3,
+        "soil_saturation_index": 0.86,
+        "humidity_avg_pct": 86.1,
+        "temp_range_c": 8.2,
+        "antecedent_moisture_index": 0.406
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0059",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2020-07-10",
+      "features": {
+        "prcp_3day_avg_mm": 270.02,
+        "prcp_7day_cumulative_mm": 1132.82,
+        "upstream_discharge_m3s": 37885.5,
+        "soil_saturation_index": 0.829,
+        "humidity_avg_pct": 82.4,
+        "temp_range_c": 11.5,
+        "antecedent_moisture_index": 0.518
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0060",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2012-07-04",
+      "features": {
+        "prcp_3day_avg_mm": 283.67,
+        "prcp_7day_cumulative_mm": 1068.35,
+        "upstream_discharge_m3s": 22178.3,
+        "soil_saturation_index": 0.969,
+        "humidity_avg_pct": 81.3,
+        "temp_range_c": 15.4,
+        "antecedent_moisture_index": 0.394
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0061",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2022-09-20",
+      "features": {
+        "prcp_3day_avg_mm": 179.35,
+        "prcp_7day_cumulative_mm": 547.25,
+        "upstream_discharge_m3s": 8310.8,
+        "soil_saturation_index": 0.802,
+        "humidity_avg_pct": 77.0,
+        "temp_range_c": 13.3,
+        "antecedent_moisture_index": 0.392
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0062",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2007-12-05",
+      "features": {
+        "prcp_3day_avg_mm": 25.51,
+        "prcp_7day_cumulative_mm": 81.6,
+        "upstream_discharge_m3s": 5045.3,
+        "soil_saturation_index": 0.155,
+        "humidity_avg_pct": 62.6,
+        "temp_range_c": 11.4,
+        "antecedent_moisture_index": 0.39
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0063",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2017-02-27",
+      "features": {
+        "prcp_3day_avg_mm": 2.61,
+        "prcp_7day_cumulative_mm": 7.87,
+        "upstream_discharge_m3s": 11881.8,
+        "soil_saturation_index": 0.425,
+        "humidity_avg_pct": 54.8,
+        "temp_range_c": 17.5,
+        "antecedent_moisture_index": 0.126
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0064",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2001-09-25",
+      "features": {
+        "prcp_3day_avg_mm": 23.31,
+        "prcp_7day_cumulative_mm": 77.67,
+        "upstream_discharge_m3s": 13443.5,
+        "soil_saturation_index": 0.46,
+        "humidity_avg_pct": 57.9,
+        "temp_range_c": 11.0,
+        "antecedent_moisture_index": 0.277
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0065",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2007-10-20",
+      "features": {
+        "prcp_3day_avg_mm": 2.41,
+        "prcp_7day_cumulative_mm": 8.86,
+        "upstream_discharge_m3s": 3439.8,
+        "soil_saturation_index": 0.455,
+        "humidity_avg_pct": 68.8,
+        "temp_range_c": 8.8,
+        "antecedent_moisture_index": 0.172
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0066",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2001-03-01",
+      "features": {
+        "prcp_3day_avg_mm": 16.34,
+        "prcp_7day_cumulative_mm": 52.34,
+        "upstream_discharge_m3s": 5201.9,
+        "soil_saturation_index": 0.163,
+        "humidity_avg_pct": 60.7,
+        "temp_range_c": 16.6,
+        "antecedent_moisture_index": 0.121
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0067",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2007-11-19",
+      "features": {
+        "prcp_3day_avg_mm": 26.45,
+        "prcp_7day_cumulative_mm": 98.03,
+        "upstream_discharge_m3s": 11492.9,
+        "soil_saturation_index": 0.368,
+        "humidity_avg_pct": 68.0,
+        "temp_range_c": 16.3,
+        "antecedent_moisture_index": 0.121
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0068",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2007-10-24",
+      "features": {
+        "prcp_3day_avg_mm": 32.97,
+        "prcp_7day_cumulative_mm": 106.35,
+        "upstream_discharge_m3s": 6324.1,
+        "soil_saturation_index": 0.337,
+        "humidity_avg_pct": 67.6,
+        "temp_range_c": 10.7,
+        "antecedent_moisture_index": 0.262
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0069",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2001-10-02",
+      "features": {
+        "prcp_3day_avg_mm": 35.58,
+        "prcp_7day_cumulative_mm": 111.02,
+        "upstream_discharge_m3s": 10486.2,
+        "soil_saturation_index": 0.16,
+        "humidity_avg_pct": 62.0,
+        "temp_range_c": 16.6,
+        "antecedent_moisture_index": 0.276
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0070",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2010-05-19",
+      "features": {
+        "prcp_3day_avg_mm": 1.61,
+        "prcp_7day_cumulative_mm": 6.57,
+        "upstream_discharge_m3s": 4113.0,
+        "soil_saturation_index": 0.411,
+        "humidity_avg_pct": 62.7,
+        "temp_range_c": 13.9,
+        "antecedent_moisture_index": 0.29
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0071",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2001-08-12",
+      "features": {
+        "prcp_3day_avg_mm": 22.87,
+        "prcp_7day_cumulative_mm": 77.21,
+        "upstream_discharge_m3s": 5182.5,
+        "soil_saturation_index": 0.214,
+        "humidity_avg_pct": 49.6,
+        "temp_range_c": 14.6,
+        "antecedent_moisture_index": 0.22
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0072",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2019-01-15",
+      "features": {
+        "prcp_3day_avg_mm": 3.52,
+        "prcp_7day_cumulative_mm": 14.13,
+        "upstream_discharge_m3s": 7743.2,
+        "soil_saturation_index": 0.459,
+        "humidity_avg_pct": 47.6,
+        "temp_range_c": 8.0,
+        "antecedent_moisture_index": 0.361
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0073",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2013-01-07",
+      "features": {
+        "prcp_3day_avg_mm": 20.74,
+        "prcp_7day_cumulative_mm": 59.56,
+        "upstream_discharge_m3s": 5154.6,
+        "soil_saturation_index": 0.327,
+        "humidity_avg_pct": 58.7,
+        "temp_range_c": 9.3,
+        "antecedent_moisture_index": 0.186
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0074",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2017-02-01",
+      "features": {
+        "prcp_3day_avg_mm": 38.93,
+        "prcp_7day_cumulative_mm": 139.01,
+        "upstream_discharge_m3s": 6527.7,
+        "soil_saturation_index": 0.213,
+        "humidity_avg_pct": 58.3,
+        "temp_range_c": 8.9,
+        "antecedent_moisture_index": 0.398
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0075",
+      "location_id": "LOC_04",
+      "location_name": "Chenab at Marala",
+      "date": "2017-02-21",
+      "features": {
+        "prcp_3day_avg_mm": 33.29,
+        "prcp_7day_cumulative_mm": 105.94,
+        "upstream_discharge_m3s": 13473.2,
+        "soil_saturation_index": 0.354,
+        "humidity_avg_pct": 55.0,
+        "temp_range_c": 17.8,
+        "antecedent_moisture_index": 0.173
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0076",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2015-07-13",
+      "features": {
+        "prcp_3day_avg_mm": 157.37,
+        "prcp_7day_cumulative_mm": 456.0,
+        "upstream_discharge_m3s": 55203.7,
+        "soil_saturation_index": 0.781,
+        "humidity_avg_pct": 87.0,
+        "temp_range_c": 16.5,
+        "antecedent_moisture_index": 0.438
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0077",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2012-07-10",
+      "features": {
+        "prcp_3day_avg_mm": 284.8,
+        "prcp_7day_cumulative_mm": 1142.44,
+        "upstream_discharge_m3s": 33198.6,
+        "soil_saturation_index": 0.902,
+        "humidity_avg_pct": 91.7,
+        "temp_range_c": 12.8,
+        "antecedent_moisture_index": 0.433
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0078",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2014-08-11",
+      "features": {
+        "prcp_3day_avg_mm": 318.97,
+        "prcp_7day_cumulative_mm": 1275.36,
+        "upstream_discharge_m3s": 24590.5,
+        "soil_saturation_index": 0.838,
+        "humidity_avg_pct": 94.6,
+        "temp_range_c": 11.2,
+        "antecedent_moisture_index": 0.531
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0079",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2014-09-26",
+      "features": {
+        "prcp_3day_avg_mm": 307.34,
+        "prcp_7day_cumulative_mm": 1076.67,
+        "upstream_discharge_m3s": 38401.3,
+        "soil_saturation_index": 0.759,
+        "humidity_avg_pct": 94.6,
+        "temp_range_c": 16.7,
+        "antecedent_moisture_index": 0.812
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0080",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2010-09-15",
+      "features": {
+        "prcp_3day_avg_mm": 115.65,
+        "prcp_7day_cumulative_mm": 335.94,
+        "upstream_discharge_m3s": 59682.0,
+        "soil_saturation_index": 0.973,
+        "humidity_avg_pct": 77.9,
+        "temp_range_c": 10.7,
+        "antecedent_moisture_index": 0.636
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0081",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2020-07-28",
+      "features": {
+        "prcp_3day_avg_mm": 190.2,
+        "prcp_7day_cumulative_mm": 699.46,
+        "upstream_discharge_m3s": 54200.9,
+        "soil_saturation_index": 0.969,
+        "humidity_avg_pct": 88.5,
+        "temp_range_c": 12.9,
+        "antecedent_moisture_index": 0.579
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0082",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2010-07-21",
+      "features": {
+        "prcp_3day_avg_mm": 274.89,
+        "prcp_7day_cumulative_mm": 1146.19,
+        "upstream_discharge_m3s": 38312.3,
+        "soil_saturation_index": 0.771,
+        "humidity_avg_pct": 80.7,
+        "temp_range_c": 15.0,
+        "antecedent_moisture_index": 0.27
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0083",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2007-01-02",
+      "features": {
+        "prcp_3day_avg_mm": 12.97,
+        "prcp_7day_cumulative_mm": 40.77,
+        "upstream_discharge_m3s": 5974.9,
+        "soil_saturation_index": 0.322,
+        "humidity_avg_pct": 41.7,
+        "temp_range_c": 14.8,
+        "antecedent_moisture_index": 0.154
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0084",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2001-10-28",
+      "features": {
+        "prcp_3day_avg_mm": 15.3,
+        "prcp_7day_cumulative_mm": 47.82,
+        "upstream_discharge_m3s": 9241.1,
+        "soil_saturation_index": 0.383,
+        "humidity_avg_pct": 60.5,
+        "temp_range_c": 12.6,
+        "antecedent_moisture_index": 0.3
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0085",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2017-05-22",
+      "features": {
+        "prcp_3day_avg_mm": 21.86,
+        "prcp_7day_cumulative_mm": 70.38,
+        "upstream_discharge_m3s": 17548.5,
+        "soil_saturation_index": 0.545,
+        "humidity_avg_pct": 42.2,
+        "temp_range_c": 14.9,
+        "antecedent_moisture_index": 0.237
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0086",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2005-07-28",
+      "features": {
+        "prcp_3day_avg_mm": 27.06,
+        "prcp_7day_cumulative_mm": 113.37,
+        "upstream_discharge_m3s": 5796.4,
+        "soil_saturation_index": 0.38,
+        "humidity_avg_pct": 47.1,
+        "temp_range_c": 17.8,
+        "antecedent_moisture_index": 0.297
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0087",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2000-10-28",
+      "features": {
+        "prcp_3day_avg_mm": 27.43,
+        "prcp_7day_cumulative_mm": 95.89,
+        "upstream_discharge_m3s": 7669.8,
+        "soil_saturation_index": 0.393,
+        "humidity_avg_pct": 62.3,
+        "temp_range_c": 10.9,
+        "antecedent_moisture_index": 0.34
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0088",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2009-04-21",
+      "features": {
+        "prcp_3day_avg_mm": 7.61,
+        "prcp_7day_cumulative_mm": 28.54,
+        "upstream_discharge_m3s": 4504.7,
+        "soil_saturation_index": 0.457,
+        "humidity_avg_pct": 47.5,
+        "temp_range_c": 9.0,
+        "antecedent_moisture_index": 0.288
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0089",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2007-08-02",
+      "features": {
+        "prcp_3day_avg_mm": 32.46,
+        "prcp_7day_cumulative_mm": 124.84,
+        "upstream_discharge_m3s": 2749.8,
+        "soil_saturation_index": 0.268,
+        "humidity_avg_pct": 62.0,
+        "temp_range_c": 9.3,
+        "antecedent_moisture_index": 0.262
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0090",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2019-09-09",
+      "features": {
+        "prcp_3day_avg_mm": 46.51,
+        "prcp_7day_cumulative_mm": 182.73,
+        "upstream_discharge_m3s": 13256.3,
+        "soil_saturation_index": 0.343,
+        "humidity_avg_pct": 47.7,
+        "temp_range_c": 11.4,
+        "antecedent_moisture_index": 0.135
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0091",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2003-04-28",
+      "features": {
+        "prcp_3day_avg_mm": 27.05,
+        "prcp_7day_cumulative_mm": 96.86,
+        "upstream_discharge_m3s": 2936.8,
+        "soil_saturation_index": 0.488,
+        "humidity_avg_pct": 60.2,
+        "temp_range_c": 11.9,
+        "antecedent_moisture_index": 0.179
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0092",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2017-06-22",
+      "features": {
+        "prcp_3day_avg_mm": 29.96,
+        "prcp_7day_cumulative_mm": 99.47,
+        "upstream_discharge_m3s": 8719.8,
+        "soil_saturation_index": 0.405,
+        "humidity_avg_pct": 47.9,
+        "temp_range_c": 12.7,
+        "antecedent_moisture_index": 0.286
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0093",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2009-10-08",
+      "features": {
+        "prcp_3day_avg_mm": 25.91,
+        "prcp_7day_cumulative_mm": 96.08,
+        "upstream_discharge_m3s": 3396.3,
+        "soil_saturation_index": 0.43,
+        "humidity_avg_pct": 59.1,
+        "temp_range_c": 8.5,
+        "antecedent_moisture_index": 0.111
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0094",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2001-02-08",
+      "features": {
+        "prcp_3day_avg_mm": 35.49,
+        "prcp_7day_cumulative_mm": 136.3,
+        "upstream_discharge_m3s": 12179.6,
+        "soil_saturation_index": 0.418,
+        "humidity_avg_pct": 44.1,
+        "temp_range_c": 12.2,
+        "antecedent_moisture_index": 0.323
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0095",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2013-11-04",
+      "features": {
+        "prcp_3day_avg_mm": 33.35,
+        "prcp_7day_cumulative_mm": 125.6,
+        "upstream_discharge_m3s": 6278.0,
+        "soil_saturation_index": 0.262,
+        "humidity_avg_pct": 58.5,
+        "temp_range_c": 12.4,
+        "antecedent_moisture_index": 0.171
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0096",
+      "location_id": "LOC_05",
+      "location_name": "Chenab at Panjnad",
+      "date": "2001-11-12",
+      "features": {
+        "prcp_3day_avg_mm": 21.78,
+        "prcp_7day_cumulative_mm": 66.77,
+        "upstream_discharge_m3s": 3145.5,
+        "soil_saturation_index": 0.309,
+        "humidity_avg_pct": 69.3,
+        "temp_range_c": 16.5,
+        "antecedent_moisture_index": 0.236
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0097",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2020-07-21",
+      "features": {
+        "prcp_3day_avg_mm": 264.2,
+        "prcp_7day_cumulative_mm": 1105.5,
+        "upstream_discharge_m3s": 33699.2,
+        "soil_saturation_index": 0.827,
+        "humidity_avg_pct": 94.4,
+        "temp_range_c": 10.1,
+        "antecedent_moisture_index": 0.781
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0098",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2011-09-07",
+      "features": {
+        "prcp_3day_avg_mm": 305.51,
+        "prcp_7day_cumulative_mm": 1110.33,
+        "upstream_discharge_m3s": 27523.0,
+        "soil_saturation_index": 0.931,
+        "humidity_avg_pct": 79.7,
+        "temp_range_c": 17.8,
+        "antecedent_moisture_index": 0.891
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0099",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2012-07-04",
+      "features": {
+        "prcp_3day_avg_mm": 269.33,
+        "prcp_7day_cumulative_mm": 843.84,
+        "upstream_discharge_m3s": 17275.5,
+        "soil_saturation_index": 0.932,
+        "humidity_avg_pct": 75.5,
+        "temp_range_c": 9.7,
+        "antecedent_moisture_index": 0.237
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0100",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2014-09-04",
+      "features": {
+        "prcp_3day_avg_mm": 289.47,
+        "prcp_7day_cumulative_mm": 854.71,
+        "upstream_discharge_m3s": 40671.7,
+        "soil_saturation_index": 0.868,
+        "humidity_avg_pct": 84.5,
+        "temp_range_c": 17.5,
+        "antecedent_moisture_index": 0.23
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0101",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2007-08-21",
+      "features": {
+        "prcp_3day_avg_mm": 53.99,
+        "prcp_7day_cumulative_mm": 203.01,
+        "upstream_discharge_m3s": 7495.4,
+        "soil_saturation_index": 0.311,
+        "humidity_avg_pct": 41.8,
+        "temp_range_c": 17.1,
+        "antecedent_moisture_index": 0.122
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0102",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2009-10-05",
+      "features": {
+        "prcp_3day_avg_mm": 2.63,
+        "prcp_7day_cumulative_mm": 8.55,
+        "upstream_discharge_m3s": 14647.3,
+        "soil_saturation_index": 0.369,
+        "humidity_avg_pct": 48.3,
+        "temp_range_c": 13.3,
+        "antecedent_moisture_index": 0.236
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0103",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2013-02-26",
+      "features": {
+        "prcp_3day_avg_mm": 28.07,
+        "prcp_7day_cumulative_mm": 106.93,
+        "upstream_discharge_m3s": 5156.0,
+        "soil_saturation_index": 0.458,
+        "humidity_avg_pct": 65.6,
+        "temp_range_c": 12.5,
+        "antecedent_moisture_index": 0.169
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0104",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2017-07-14",
+      "features": {
+        "prcp_3day_avg_mm": 40.86,
+        "prcp_7day_cumulative_mm": 168.95,
+        "upstream_discharge_m3s": 8286.4,
+        "soil_saturation_index": 0.252,
+        "humidity_avg_pct": 49.4,
+        "temp_range_c": 12.7,
+        "antecedent_moisture_index": 0.127
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0105",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2001-07-04",
+      "features": {
+        "prcp_3day_avg_mm": 41.7,
+        "prcp_7day_cumulative_mm": 172.6,
+        "upstream_discharge_m3s": 5852.8,
+        "soil_saturation_index": 0.174,
+        "humidity_avg_pct": 51.2,
+        "temp_range_c": 14.7,
+        "antecedent_moisture_index": 0.223
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0106",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2022-07-28",
+      "features": {
+        "prcp_3day_avg_mm": 51.29,
+        "prcp_7day_cumulative_mm": 151.04,
+        "upstream_discharge_m3s": 6449.8,
+        "soil_saturation_index": 0.275,
+        "humidity_avg_pct": 41.5,
+        "temp_range_c": 9.5,
+        "antecedent_moisture_index": 0.245
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0107",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2001-06-28",
+      "features": {
+        "prcp_3day_avg_mm": 22.25,
+        "prcp_7day_cumulative_mm": 75.67,
+        "upstream_discharge_m3s": 6875.3,
+        "soil_saturation_index": 0.24,
+        "humidity_avg_pct": 43.4,
+        "temp_range_c": 15.7,
+        "antecedent_moisture_index": 0.287
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0108",
+      "location_id": "LOC_06",
+      "location_name": "Jhelum at Mangla",
+      "date": "2020-09-01",
+      "features": {
+        "prcp_3day_avg_mm": 34.1,
+        "prcp_7day_cumulative_mm": 108.54,
+        "upstream_discharge_m3s": 12329.0,
+        "soil_saturation_index": 0.162,
+        "humidity_avg_pct": 59.7,
+        "temp_range_c": 17.2,
+        "antecedent_moisture_index": 0.205
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0109",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2011-07-19",
+      "features": {
+        "prcp_3day_avg_mm": 268.45,
+        "prcp_7day_cumulative_mm": 786.14,
+        "upstream_discharge_m3s": 36562.7,
+        "soil_saturation_index": 0.974,
+        "humidity_avg_pct": 76.4,
+        "temp_range_c": 11.8,
+        "antecedent_moisture_index": 0.518
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0110",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2012-08-24",
+      "features": {
+        "prcp_3day_avg_mm": 189.2,
+        "prcp_7day_cumulative_mm": 570.98,
+        "upstream_discharge_m3s": 43800.4,
+        "soil_saturation_index": 0.953,
+        "humidity_avg_pct": 93.8,
+        "temp_range_c": 8.5,
+        "antecedent_moisture_index": 0.257
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0111",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2020-08-16",
+      "features": {
+        "prcp_3day_avg_mm": 256.48,
+        "prcp_7day_cumulative_mm": 842.1,
+        "upstream_discharge_m3s": 10864.9,
+        "soil_saturation_index": 0.868,
+        "humidity_avg_pct": 83.3,
+        "temp_range_c": 14.8,
+        "antecedent_moisture_index": 0.615
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0112",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2020-08-02",
+      "features": {
+        "prcp_3day_avg_mm": 164.48,
+        "prcp_7day_cumulative_mm": 678.24,
+        "upstream_discharge_m3s": 29334.9,
+        "soil_saturation_index": 0.797,
+        "humidity_avg_pct": 94.7,
+        "temp_range_c": 15.6,
+        "antecedent_moisture_index": 0.403
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0113",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2010-08-24",
+      "features": {
+        "prcp_3day_avg_mm": 214.5,
+        "prcp_7day_cumulative_mm": 768.37,
+        "upstream_discharge_m3s": 38247.7,
+        "soil_saturation_index": 0.803,
+        "humidity_avg_pct": 77.6,
+        "temp_range_c": 11.5,
+        "antecedent_moisture_index": 0.478
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0114",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2010-08-01",
+      "features": {
+        "prcp_3day_avg_mm": 221.42,
+        "prcp_7day_cumulative_mm": 745.35,
+        "upstream_discharge_m3s": 31715.8,
+        "soil_saturation_index": 0.849,
+        "humidity_avg_pct": 76.6,
+        "temp_range_c": 10.9,
+        "antecedent_moisture_index": 0.484
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0115",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2021-08-27",
+      "features": {
+        "prcp_3day_avg_mm": 38.62,
+        "prcp_7day_cumulative_mm": 131.69,
+        "upstream_discharge_m3s": 5563.5,
+        "soil_saturation_index": 0.192,
+        "humidity_avg_pct": 50.9,
+        "temp_range_c": 8.8,
+        "antecedent_moisture_index": 0.361
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0116",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2009-04-11",
+      "features": {
+        "prcp_3day_avg_mm": 31.16,
+        "prcp_7day_cumulative_mm": 95.72,
+        "upstream_discharge_m3s": 10589.6,
+        "soil_saturation_index": 0.362,
+        "humidity_avg_pct": 42.3,
+        "temp_range_c": 11.5,
+        "antecedent_moisture_index": 0.387
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0117",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2003-04-04",
+      "features": {
+        "prcp_3day_avg_mm": 5.86,
+        "prcp_7day_cumulative_mm": 21.78,
+        "upstream_discharge_m3s": 3997.5,
+        "soil_saturation_index": 0.454,
+        "humidity_avg_pct": 45.9,
+        "temp_range_c": 15.7,
+        "antecedent_moisture_index": 0.248
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0118",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2021-10-15",
+      "features": {
+        "prcp_3day_avg_mm": 27.25,
+        "prcp_7day_cumulative_mm": 88.62,
+        "upstream_discharge_m3s": 12794.2,
+        "soil_saturation_index": 0.545,
+        "humidity_avg_pct": 66.5,
+        "temp_range_c": 11.2,
+        "antecedent_moisture_index": 0.232
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0119",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2017-11-10",
+      "features": {
+        "prcp_3day_avg_mm": 31.85,
+        "prcp_7day_cumulative_mm": 109.78,
+        "upstream_discharge_m3s": 2039.4,
+        "soil_saturation_index": 0.18,
+        "humidity_avg_pct": 57.7,
+        "temp_range_c": 11.7,
+        "antecedent_moisture_index": 0.186
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0120",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2001-10-20",
+      "features": {
+        "prcp_3day_avg_mm": 20.28,
+        "prcp_7day_cumulative_mm": 82.23,
+        "upstream_discharge_m3s": 6635.2,
+        "soil_saturation_index": 0.467,
+        "humidity_avg_pct": 53.9,
+        "temp_range_c": 16.1,
+        "antecedent_moisture_index": 0.296
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0121",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2021-08-17",
+      "features": {
+        "prcp_3day_avg_mm": 8.45,
+        "prcp_7day_cumulative_mm": 27.72,
+        "upstream_discharge_m3s": 6019.1,
+        "soil_saturation_index": 0.51,
+        "humidity_avg_pct": 41.9,
+        "temp_range_c": 13.0,
+        "antecedent_moisture_index": 0.152
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0122",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2017-08-17",
+      "features": {
+        "prcp_3day_avg_mm": 29.27,
+        "prcp_7day_cumulative_mm": 98.72,
+        "upstream_discharge_m3s": 4711.5,
+        "soil_saturation_index": 0.263,
+        "humidity_avg_pct": 44.8,
+        "temp_range_c": 14.0,
+        "antecedent_moisture_index": 0.337
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0123",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2009-02-11",
+      "features": {
+        "prcp_3day_avg_mm": 3.78,
+        "prcp_7day_cumulative_mm": 14.06,
+        "upstream_discharge_m3s": 8892.1,
+        "soil_saturation_index": 0.439,
+        "humidity_avg_pct": 60.4,
+        "temp_range_c": 16.7,
+        "antecedent_moisture_index": 0.2
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0124",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2015-03-12",
+      "features": {
+        "prcp_3day_avg_mm": 12.41,
+        "prcp_7day_cumulative_mm": 47.06,
+        "upstream_discharge_m3s": 3154.7,
+        "soil_saturation_index": 0.202,
+        "humidity_avg_pct": 59.7,
+        "temp_range_c": 13.6,
+        "antecedent_moisture_index": 0.293
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0125",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2003-11-23",
+      "features": {
+        "prcp_3day_avg_mm": 33.16,
+        "prcp_7day_cumulative_mm": 122.83,
+        "upstream_discharge_m3s": 7024.3,
+        "soil_saturation_index": 0.361,
+        "humidity_avg_pct": 62.2,
+        "temp_range_c": 11.6,
+        "antecedent_moisture_index": 0.209
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0126",
+      "location_id": "LOC_07",
+      "location_name": "Indus at Chashma",
+      "date": "2005-06-25",
+      "features": {
+        "prcp_3day_avg_mm": 19.45,
+        "prcp_7day_cumulative_mm": 77.46,
+        "upstream_discharge_m3s": 2065.0,
+        "soil_saturation_index": 0.181,
+        "humidity_avg_pct": 46.8,
+        "temp_range_c": 15.7,
+        "antecedent_moisture_index": 0.351
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0127",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2015-07-22",
+      "features": {
+        "prcp_3day_avg_mm": 192.15,
+        "prcp_7day_cumulative_mm": 581.67,
+        "upstream_discharge_m3s": 33536.9,
+        "soil_saturation_index": 0.837,
+        "humidity_avg_pct": 90.3,
+        "temp_range_c": 15.7,
+        "antecedent_moisture_index": 0.766
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0128",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2020-08-02",
+      "features": {
+        "prcp_3day_avg_mm": 209.78,
+        "prcp_7day_cumulative_mm": 671.08,
+        "upstream_discharge_m3s": 33748.0,
+        "soil_saturation_index": 0.852,
+        "humidity_avg_pct": 88.5,
+        "temp_range_c": 12.5,
+        "antecedent_moisture_index": 0.574
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0129",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2022-08-27",
+      "features": {
+        "prcp_3day_avg_mm": 158.18,
+        "prcp_7day_cumulative_mm": 613.28,
+        "upstream_discharge_m3s": 44161.9,
+        "soil_saturation_index": 0.851,
+        "humidity_avg_pct": 88.6,
+        "temp_range_c": 13.0,
+        "antecedent_moisture_index": 0.493
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0130",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2022-07-26",
+      "features": {
+        "prcp_3day_avg_mm": 255.91,
+        "prcp_7day_cumulative_mm": 849.54,
+        "upstream_discharge_m3s": 34312.6,
+        "soil_saturation_index": 0.861,
+        "humidity_avg_pct": 92.5,
+        "temp_range_c": 15.1,
+        "antecedent_moisture_index": 0.561
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0131",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2012-07-25",
+      "features": {
+        "prcp_3day_avg_mm": 150.15,
+        "prcp_7day_cumulative_mm": 439.71,
+        "upstream_discharge_m3s": 48316.8,
+        "soil_saturation_index": 0.941,
+        "humidity_avg_pct": 84.0,
+        "temp_range_c": 16.2,
+        "antecedent_moisture_index": 0.819
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0132",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2014-07-13",
+      "features": {
+        "prcp_3day_avg_mm": 231.48,
+        "prcp_7day_cumulative_mm": 657.27,
+        "upstream_discharge_m3s": 64844.5,
+        "soil_saturation_index": 0.836,
+        "humidity_avg_pct": 79.7,
+        "temp_range_c": 16.4,
+        "antecedent_moisture_index": 0.655
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0133",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2011-07-10",
+      "features": {
+        "prcp_3day_avg_mm": 330.34,
+        "prcp_7day_cumulative_mm": 1141.91,
+        "upstream_discharge_m3s": 42923.5,
+        "soil_saturation_index": 0.925,
+        "humidity_avg_pct": 84.4,
+        "temp_range_c": 17.1,
+        "antecedent_moisture_index": 0.213
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0134",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2003-09-24",
+      "features": {
+        "prcp_3day_avg_mm": 34.1,
+        "prcp_7day_cumulative_mm": 101.29,
+        "upstream_discharge_m3s": 5260.5,
+        "soil_saturation_index": 0.245,
+        "humidity_avg_pct": 52.7,
+        "temp_range_c": 14.4,
+        "antecedent_moisture_index": 0.287
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0135",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2001-08-20",
+      "features": {
+        "prcp_3day_avg_mm": 30.02,
+        "prcp_7day_cumulative_mm": 96.29,
+        "upstream_discharge_m3s": 2092.1,
+        "soil_saturation_index": 0.437,
+        "humidity_avg_pct": 59.0,
+        "temp_range_c": 11.5,
+        "antecedent_moisture_index": 0.271
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0136",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2011-11-03",
+      "features": {
+        "prcp_3day_avg_mm": 20.94,
+        "prcp_7day_cumulative_mm": 81.68,
+        "upstream_discharge_m3s": 9499.8,
+        "soil_saturation_index": 0.368,
+        "humidity_avg_pct": 50.8,
+        "temp_range_c": 8.2,
+        "antecedent_moisture_index": 0.362
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0137",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2010-07-12",
+      "features": {
+        "prcp_3day_avg_mm": 14.2,
+        "prcp_7day_cumulative_mm": 54.35,
+        "upstream_discharge_m3s": 10019.9,
+        "soil_saturation_index": 0.288,
+        "humidity_avg_pct": 40.5,
+        "temp_range_c": 15.7,
+        "antecedent_moisture_index": 0.321
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0138",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2003-01-12",
+      "features": {
+        "prcp_3day_avg_mm": 21.84,
+        "prcp_7day_cumulative_mm": 75.36,
+        "upstream_discharge_m3s": 6410.5,
+        "soil_saturation_index": 0.462,
+        "humidity_avg_pct": 64.4,
+        "temp_range_c": 14.3,
+        "antecedent_moisture_index": 0.343
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0139",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2017-01-10",
+      "features": {
+        "prcp_3day_avg_mm": 8.06,
+        "prcp_7day_cumulative_mm": 26.08,
+        "upstream_discharge_m3s": 7705.5,
+        "soil_saturation_index": 0.276,
+        "humidity_avg_pct": 63.7,
+        "temp_range_c": 16.2,
+        "antecedent_moisture_index": 0.242
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0140",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2010-04-10",
+      "features": {
+        "prcp_3day_avg_mm": 14.28,
+        "prcp_7day_cumulative_mm": 42.47,
+        "upstream_discharge_m3s": 7225.0,
+        "soil_saturation_index": 0.283,
+        "humidity_avg_pct": 63.4,
+        "temp_range_c": 16.9,
+        "antecedent_moisture_index": 0.323
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0141",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2009-03-16",
+      "features": {
+        "prcp_3day_avg_mm": 27.68,
+        "prcp_7day_cumulative_mm": 80.71,
+        "upstream_discharge_m3s": 7599.0,
+        "soil_saturation_index": 0.257,
+        "humidity_avg_pct": 51.0,
+        "temp_range_c": 12.3,
+        "antecedent_moisture_index": 0.399
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0142",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2019-05-11",
+      "features": {
+        "prcp_3day_avg_mm": 4.1,
+        "prcp_7day_cumulative_mm": 15.61,
+        "upstream_discharge_m3s": 2980.8,
+        "soil_saturation_index": 0.328,
+        "humidity_avg_pct": 49.8,
+        "temp_range_c": 12.4,
+        "antecedent_moisture_index": 0.234
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0143",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2009-10-14",
+      "features": {
+        "prcp_3day_avg_mm": 10.98,
+        "prcp_7day_cumulative_mm": 40.55,
+        "upstream_discharge_m3s": 7537.5,
+        "soil_saturation_index": 0.18,
+        "humidity_avg_pct": 69.4,
+        "temp_range_c": 16.0,
+        "antecedent_moisture_index": 0.304
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0144",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2003-10-22",
+      "features": {
+        "prcp_3day_avg_mm": 31.25,
+        "prcp_7day_cumulative_mm": 103.54,
+        "upstream_discharge_m3s": 3666.9,
+        "soil_saturation_index": 0.461,
+        "humidity_avg_pct": 41.0,
+        "temp_range_c": 13.7,
+        "antecedent_moisture_index": 0.282
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0145",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2017-06-12",
+      "features": {
+        "prcp_3day_avg_mm": 17.76,
+        "prcp_7day_cumulative_mm": 57.54,
+        "upstream_discharge_m3s": 3283.1,
+        "soil_saturation_index": 0.297,
+        "humidity_avg_pct": 42.3,
+        "temp_range_c": 17.6,
+        "antecedent_moisture_index": 0.108
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0146",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2017-09-13",
+      "features": {
+        "prcp_3day_avg_mm": 51.16,
+        "prcp_7day_cumulative_mm": 158.61,
+        "upstream_discharge_m3s": 9733.2,
+        "soil_saturation_index": 0.432,
+        "humidity_avg_pct": 43.5,
+        "temp_range_c": 14.9,
+        "antecedent_moisture_index": 0.4
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0147",
+      "location_id": "LOC_08",
+      "location_name": "Chenab at Qadirabad",
+      "date": "2001-03-28",
+      "features": {
+        "prcp_3day_avg_mm": 2.96,
+        "prcp_7day_cumulative_mm": 11.65,
+        "upstream_discharge_m3s": 13418.3,
+        "soil_saturation_index": 0.549,
+        "humidity_avg_pct": 45.2,
+        "temp_range_c": 17.9,
+        "antecedent_moisture_index": 0.3
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0148",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2020-07-18",
+      "features": {
+        "prcp_3day_avg_mm": 241.04,
+        "prcp_7day_cumulative_mm": 987.83,
+        "upstream_discharge_m3s": 44588.0,
+        "soil_saturation_index": 0.914,
+        "humidity_avg_pct": 92.8,
+        "temp_range_c": 15.9,
+        "antecedent_moisture_index": 0.556
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0149",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2011-07-08",
+      "features": {
+        "prcp_3day_avg_mm": 300.11,
+        "prcp_7day_cumulative_mm": 1177.96,
+        "upstream_discharge_m3s": 33582.2,
+        "soil_saturation_index": 0.835,
+        "humidity_avg_pct": 75.5,
+        "temp_range_c": 14.1,
+        "antecedent_moisture_index": 0.26
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0150",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2014-09-24",
+      "features": {
+        "prcp_3day_avg_mm": 225.92,
+        "prcp_7day_cumulative_mm": 672.22,
+        "upstream_discharge_m3s": 20950.6,
+        "soil_saturation_index": 0.882,
+        "humidity_avg_pct": 83.2,
+        "temp_range_c": 8.7,
+        "antecedent_moisture_index": 0.526
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0151",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2012-07-27",
+      "features": {
+        "prcp_3day_avg_mm": 297.7,
+        "prcp_7day_cumulative_mm": 1013.88,
+        "upstream_discharge_m3s": 37743.6,
+        "soil_saturation_index": 0.972,
+        "humidity_avg_pct": 87.8,
+        "temp_range_c": 8.6,
+        "antecedent_moisture_index": 0.287
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0152",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2003-03-11",
+      "features": {
+        "prcp_3day_avg_mm": 37.39,
+        "prcp_7day_cumulative_mm": 119.56,
+        "upstream_discharge_m3s": 3730.4,
+        "soil_saturation_index": 0.358,
+        "humidity_avg_pct": 46.8,
+        "temp_range_c": 10.0,
+        "antecedent_moisture_index": 0.387
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0153",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2003-11-10",
+      "features": {
+        "prcp_3day_avg_mm": 24.58,
+        "prcp_7day_cumulative_mm": 88.79,
+        "upstream_discharge_m3s": 4049.8,
+        "soil_saturation_index": 0.387,
+        "humidity_avg_pct": 42.8,
+        "temp_range_c": 14.2,
+        "antecedent_moisture_index": 0.371
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0154",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2021-01-27",
+      "features": {
+        "prcp_3day_avg_mm": 34.55,
+        "prcp_7day_cumulative_mm": 109.55,
+        "upstream_discharge_m3s": 5499.0,
+        "soil_saturation_index": 0.458,
+        "humidity_avg_pct": 42.4,
+        "temp_range_c": 13.7,
+        "antecedent_moisture_index": 0.285
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0155",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2017-11-18",
+      "features": {
+        "prcp_3day_avg_mm": 11.59,
+        "prcp_7day_cumulative_mm": 43.55,
+        "upstream_discharge_m3s": 4794.1,
+        "soil_saturation_index": 0.472,
+        "humidity_avg_pct": 68.7,
+        "temp_range_c": 8.7,
+        "antecedent_moisture_index": 0.118
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0156",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2013-08-15",
+      "features": {
+        "prcp_3day_avg_mm": 11.43,
+        "prcp_7day_cumulative_mm": 43.73,
+        "upstream_discharge_m3s": 8768.7,
+        "soil_saturation_index": 0.437,
+        "humidity_avg_pct": 58.2,
+        "temp_range_c": 17.8,
+        "antecedent_moisture_index": 0.139
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0157",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2019-09-04",
+      "features": {
+        "prcp_3day_avg_mm": 17.87,
+        "prcp_7day_cumulative_mm": 52.46,
+        "upstream_discharge_m3s": 3874.2,
+        "soil_saturation_index": 0.249,
+        "humidity_avg_pct": 54.0,
+        "temp_range_c": 11.8,
+        "antecedent_moisture_index": 0.285
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0158",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2003-06-19",
+      "features": {
+        "prcp_3day_avg_mm": 28.85,
+        "prcp_7day_cumulative_mm": 99.62,
+        "upstream_discharge_m3s": 7588.8,
+        "soil_saturation_index": 0.548,
+        "humidity_avg_pct": 45.7,
+        "temp_range_c": 13.0,
+        "antecedent_moisture_index": 0.127
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0159",
+      "location_id": "LOC_09",
+      "location_name": "Sutlej at Sulemanki",
+      "date": "2019-08-08",
+      "features": {
+        "prcp_3day_avg_mm": 12.05,
+        "prcp_7day_cumulative_mm": 48.62,
+        "upstream_discharge_m3s": 5259.6,
+        "soil_saturation_index": 0.348,
+        "humidity_avg_pct": 50.6,
+        "temp_range_c": 12.7,
+        "antecedent_moisture_index": 0.261
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0160",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2022-07-14",
+      "features": {
+        "prcp_3day_avg_mm": 143.88,
+        "prcp_7day_cumulative_mm": 411.97,
+        "upstream_discharge_m3s": 9862.0,
+        "soil_saturation_index": 0.843,
+        "humidity_avg_pct": 80.3,
+        "temp_range_c": 13.6,
+        "antecedent_moisture_index": 0.454
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0161",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2010-08-17",
+      "features": {
+        "prcp_3day_avg_mm": 219.18,
+        "prcp_7day_cumulative_mm": 801.22,
+        "upstream_discharge_m3s": 17247.5,
+        "soil_saturation_index": 0.893,
+        "humidity_avg_pct": 86.0,
+        "temp_range_c": 9.0,
+        "antecedent_moisture_index": 0.461
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0162",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2015-08-25",
+      "features": {
+        "prcp_3day_avg_mm": 146.34,
+        "prcp_7day_cumulative_mm": 417.71,
+        "upstream_discharge_m3s": 36808.5,
+        "soil_saturation_index": 0.759,
+        "humidity_avg_pct": 87.0,
+        "temp_range_c": 16.0,
+        "antecedent_moisture_index": 0.564
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0163",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2015-09-05",
+      "features": {
+        "prcp_3day_avg_mm": 190.06,
+        "prcp_7day_cumulative_mm": 728.87,
+        "upstream_discharge_m3s": 16685.4,
+        "soil_saturation_index": 0.978,
+        "humidity_avg_pct": 87.3,
+        "temp_range_c": 11.4,
+        "antecedent_moisture_index": 0.78
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0164",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2021-05-16",
+      "features": {
+        "prcp_3day_avg_mm": 32.63,
+        "prcp_7day_cumulative_mm": 118.03,
+        "upstream_discharge_m3s": 11137.9,
+        "soil_saturation_index": 0.542,
+        "humidity_avg_pct": 51.1,
+        "temp_range_c": 15.3,
+        "antecedent_moisture_index": 0.306
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0165",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2021-08-09",
+      "features": {
+        "prcp_3day_avg_mm": 54.16,
+        "prcp_7day_cumulative_mm": 206.33,
+        "upstream_discharge_m3s": 9400.8,
+        "soil_saturation_index": 0.381,
+        "humidity_avg_pct": 63.5,
+        "temp_range_c": 9.7,
+        "antecedent_moisture_index": 0.289
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0166",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2013-03-27",
+      "features": {
+        "prcp_3day_avg_mm": 27.23,
+        "prcp_7day_cumulative_mm": 76.96,
+        "upstream_discharge_m3s": 6874.8,
+        "soil_saturation_index": 0.194,
+        "humidity_avg_pct": 40.9,
+        "temp_range_c": 9.5,
+        "antecedent_moisture_index": 0.307
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0167",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2019-10-16",
+      "features": {
+        "prcp_3day_avg_mm": 34.91,
+        "prcp_7day_cumulative_mm": 107.89,
+        "upstream_discharge_m3s": 3282.3,
+        "soil_saturation_index": 0.205,
+        "humidity_avg_pct": 62.1,
+        "temp_range_c": 14.6,
+        "antecedent_moisture_index": 0.258
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0168",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2003-08-18",
+      "features": {
+        "prcp_3day_avg_mm": 19.17,
+        "prcp_7day_cumulative_mm": 70.94,
+        "upstream_discharge_m3s": 10688.1,
+        "soil_saturation_index": 0.438,
+        "humidity_avg_pct": 50.6,
+        "temp_range_c": 14.1,
+        "antecedent_moisture_index": 0.158
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0169",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2007-09-10",
+      "features": {
+        "prcp_3day_avg_mm": 12.59,
+        "prcp_7day_cumulative_mm": 38.91,
+        "upstream_discharge_m3s": 7371.9,
+        "soil_saturation_index": 0.266,
+        "humidity_avg_pct": 69.2,
+        "temp_range_c": 11.2,
+        "antecedent_moisture_index": 0.205
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0170",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2007-05-04",
+      "features": {
+        "prcp_3day_avg_mm": 22.94,
+        "prcp_7day_cumulative_mm": 75.31,
+        "upstream_discharge_m3s": 12611.8,
+        "soil_saturation_index": 0.308,
+        "humidity_avg_pct": 56.3,
+        "temp_range_c": 9.5,
+        "antecedent_moisture_index": 0.113
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0171",
+      "location_id": "LOC_10",
+      "location_name": "Jhelum at Rasul",
+      "date": "2001-06-15",
+      "features": {
+        "prcp_3day_avg_mm": 26.24,
+        "prcp_7day_cumulative_mm": 83.43,
+        "upstream_discharge_m3s": 5694.3,
+        "soil_saturation_index": 0.481,
+        "humidity_avg_pct": 62.4,
+        "temp_range_c": 10.7,
+        "antecedent_moisture_index": 0.133
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0172",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2020-09-08",
+      "features": {
+        "prcp_3day_avg_mm": 169.71,
+        "prcp_7day_cumulative_mm": 487.65,
+        "upstream_discharge_m3s": 23474.7,
+        "soil_saturation_index": 0.897,
+        "humidity_avg_pct": 88.4,
+        "temp_range_c": 15.2,
+        "antecedent_moisture_index": 0.27
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0173",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2010-09-06",
+      "features": {
+        "prcp_3day_avg_mm": 208.84,
+        "prcp_7day_cumulative_mm": 643.08,
+        "upstream_discharge_m3s": 54657.4,
+        "soil_saturation_index": 0.86,
+        "humidity_avg_pct": 93.7,
+        "temp_range_c": 11.2,
+        "antecedent_moisture_index": 0.652
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0174",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2020-09-08",
+      "features": {
+        "prcp_3day_avg_mm": 239.37,
+        "prcp_7day_cumulative_mm": 728.89,
+        "upstream_discharge_m3s": 52398.8,
+        "soil_saturation_index": 0.96,
+        "humidity_avg_pct": 89.5,
+        "temp_range_c": 9.8,
+        "antecedent_moisture_index": 0.844
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0175",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2022-08-06",
+      "features": {
+        "prcp_3day_avg_mm": 334.91,
+        "prcp_7day_cumulative_mm": 942.1,
+        "upstream_discharge_m3s": 36978.1,
+        "soil_saturation_index": 0.952,
+        "humidity_avg_pct": 94.2,
+        "temp_range_c": 9.1,
+        "antecedent_moisture_index": 0.888
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0176",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2014-09-18",
+      "features": {
+        "prcp_3day_avg_mm": 236.79,
+        "prcp_7day_cumulative_mm": 753.45,
+        "upstream_discharge_m3s": 28604.9,
+        "soil_saturation_index": 0.866,
+        "humidity_avg_pct": 92.8,
+        "temp_range_c": 11.3,
+        "antecedent_moisture_index": 0.712
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0177",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2012-09-06",
+      "features": {
+        "prcp_3day_avg_mm": 115.35,
+        "prcp_7day_cumulative_mm": 354.18,
+        "upstream_discharge_m3s": 26255.1,
+        "soil_saturation_index": 0.905,
+        "humidity_avg_pct": 81.7,
+        "temp_range_c": 14.4,
+        "antecedent_moisture_index": 0.484
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0178",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2009-02-13",
+      "features": {
+        "prcp_3day_avg_mm": 26.77,
+        "prcp_7day_cumulative_mm": 84.25,
+        "upstream_discharge_m3s": 2757.5,
+        "soil_saturation_index": 0.279,
+        "humidity_avg_pct": 45.5,
+        "temp_range_c": 10.4,
+        "antecedent_moisture_index": 0.326
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0179",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2007-10-24",
+      "features": {
+        "prcp_3day_avg_mm": 22.92,
+        "prcp_7day_cumulative_mm": 85.59,
+        "upstream_discharge_m3s": 5001.7,
+        "soil_saturation_index": 0.245,
+        "humidity_avg_pct": 47.8,
+        "temp_range_c": 9.6,
+        "antecedent_moisture_index": 0.306
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0180",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2007-12-04",
+      "features": {
+        "prcp_3day_avg_mm": 25.55,
+        "prcp_7day_cumulative_mm": 105.78,
+        "upstream_discharge_m3s": 5135.7,
+        "soil_saturation_index": 0.238,
+        "humidity_avg_pct": 68.2,
+        "temp_range_c": 12.5,
+        "antecedent_moisture_index": 0.397
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0181",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2013-12-18",
+      "features": {
+        "prcp_3day_avg_mm": 36.51,
+        "prcp_7day_cumulative_mm": 141.18,
+        "upstream_discharge_m3s": 9343.9,
+        "soil_saturation_index": 0.48,
+        "humidity_avg_pct": 62.7,
+        "temp_range_c": 14.0,
+        "antecedent_moisture_index": 0.336
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0182",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2017-09-23",
+      "features": {
+        "prcp_3day_avg_mm": 20.26,
+        "prcp_7day_cumulative_mm": 82.34,
+        "upstream_discharge_m3s": 2326.7,
+        "soil_saturation_index": 0.482,
+        "humidity_avg_pct": 67.5,
+        "temp_range_c": 13.4,
+        "antecedent_moisture_index": 0.149
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0183",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2019-08-04",
+      "features": {
+        "prcp_3day_avg_mm": 38.1,
+        "prcp_7day_cumulative_mm": 130.43,
+        "upstream_discharge_m3s": 2152.9,
+        "soil_saturation_index": 0.51,
+        "humidity_avg_pct": 61.5,
+        "temp_range_c": 9.3,
+        "antecedent_moisture_index": 0.225
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0184",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2000-09-15",
+      "features": {
+        "prcp_3day_avg_mm": 37.67,
+        "prcp_7day_cumulative_mm": 105.65,
+        "upstream_discharge_m3s": 2153.2,
+        "soil_saturation_index": 0.252,
+        "humidity_avg_pct": 49.2,
+        "temp_range_c": 8.7,
+        "antecedent_moisture_index": 0.227
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0185",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2001-09-02",
+      "features": {
+        "prcp_3day_avg_mm": 52.34,
+        "prcp_7day_cumulative_mm": 176.5,
+        "upstream_discharge_m3s": 11178.5,
+        "soil_saturation_index": 0.163,
+        "humidity_avg_pct": 42.1,
+        "temp_range_c": 15.7,
+        "antecedent_moisture_index": 0.393
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0186",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2013-06-13",
+      "features": {
+        "prcp_3day_avg_mm": 17.94,
+        "prcp_7day_cumulative_mm": 74.45,
+        "upstream_discharge_m3s": 8212.2,
+        "soil_saturation_index": 0.182,
+        "humidity_avg_pct": 67.5,
+        "temp_range_c": 9.3,
+        "antecedent_moisture_index": 0.358
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0187",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2003-09-13",
+      "features": {
+        "prcp_3day_avg_mm": 29.62,
+        "prcp_7day_cumulative_mm": 83.87,
+        "upstream_discharge_m3s": 3268.7,
+        "soil_saturation_index": 0.151,
+        "humidity_avg_pct": 61.8,
+        "temp_range_c": 14.7,
+        "antecedent_moisture_index": 0.263
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0188",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2013-04-08",
+      "features": {
+        "prcp_3day_avg_mm": 18.43,
+        "prcp_7day_cumulative_mm": 71.34,
+        "upstream_discharge_m3s": 1467.5,
+        "soil_saturation_index": 0.5,
+        "humidity_avg_pct": 44.7,
+        "temp_range_c": 14.6,
+        "antecedent_moisture_index": 0.284
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0189",
+      "location_id": "LOC_11",
+      "location_name": "Chenab at Khanki",
+      "date": "2005-04-03",
+      "features": {
+        "prcp_3day_avg_mm": 4.04,
+        "prcp_7day_cumulative_mm": 11.58,
+        "upstream_discharge_m3s": 8638.4,
+        "soil_saturation_index": 0.431,
+        "humidity_avg_pct": 41.0,
+        "temp_range_c": 12.0,
+        "antecedent_moisture_index": 0.17
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0190",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2011-07-05",
+      "features": {
+        "prcp_3day_avg_mm": 231.93,
+        "prcp_7day_cumulative_mm": 752.94,
+        "upstream_discharge_m3s": 36221.2,
+        "soil_saturation_index": 0.918,
+        "humidity_avg_pct": 80.8,
+        "temp_range_c": 14.7,
+        "antecedent_moisture_index": 0.424
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0191",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2011-09-17",
+      "features": {
+        "prcp_3day_avg_mm": 164.61,
+        "prcp_7day_cumulative_mm": 663.63,
+        "upstream_discharge_m3s": 29483.4,
+        "soil_saturation_index": 0.968,
+        "humidity_avg_pct": 81.0,
+        "temp_range_c": 14.3,
+        "antecedent_moisture_index": 0.499
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0192",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2010-08-21",
+      "features": {
+        "prcp_3day_avg_mm": 271.78,
+        "prcp_7day_cumulative_mm": 817.76,
+        "upstream_discharge_m3s": 19004.9,
+        "soil_saturation_index": 0.846,
+        "humidity_avg_pct": 90.7,
+        "temp_range_c": 15.5,
+        "antecedent_moisture_index": 0.531
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0193",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2012-09-05",
+      "features": {
+        "prcp_3day_avg_mm": 303.77,
+        "prcp_7day_cumulative_mm": 1087.57,
+        "upstream_discharge_m3s": 13049.5,
+        "soil_saturation_index": 0.973,
+        "humidity_avg_pct": 93.3,
+        "temp_range_c": 10.4,
+        "antecedent_moisture_index": 0.342
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0194",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2010-08-28",
+      "features": {
+        "prcp_3day_avg_mm": 200.32,
+        "prcp_7day_cumulative_mm": 666.66,
+        "upstream_discharge_m3s": 36815.4,
+        "soil_saturation_index": 0.762,
+        "humidity_avg_pct": 85.7,
+        "temp_range_c": 8.4,
+        "antecedent_moisture_index": 0.251
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0195",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2020-09-18",
+      "features": {
+        "prcp_3day_avg_mm": 163.65,
+        "prcp_7day_cumulative_mm": 666.48,
+        "upstream_discharge_m3s": 19633.3,
+        "soil_saturation_index": 0.82,
+        "humidity_avg_pct": 79.2,
+        "temp_range_c": 9.9,
+        "antecedent_moisture_index": 0.719
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0196",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2017-04-23",
+      "features": {
+        "prcp_3day_avg_mm": 24.18,
+        "prcp_7day_cumulative_mm": 93.94,
+        "upstream_discharge_m3s": 6623.0,
+        "soil_saturation_index": 0.371,
+        "humidity_avg_pct": 46.1,
+        "temp_range_c": 13.3,
+        "antecedent_moisture_index": 0.208
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0197",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2009-09-16",
+      "features": {
+        "prcp_3day_avg_mm": 26.1,
+        "prcp_7day_cumulative_mm": 84.77,
+        "upstream_discharge_m3s": 4054.2,
+        "soil_saturation_index": 0.455,
+        "humidity_avg_pct": 64.1,
+        "temp_range_c": 11.1,
+        "antecedent_moisture_index": 0.114
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0198",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2005-12-05",
+      "features": {
+        "prcp_3day_avg_mm": 0.65,
+        "prcp_7day_cumulative_mm": 2.08,
+        "upstream_discharge_m3s": 3600.7,
+        "soil_saturation_index": 0.438,
+        "humidity_avg_pct": 56.6,
+        "temp_range_c": 10.3,
+        "antecedent_moisture_index": 0.271
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0199",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2017-09-21",
+      "features": {
+        "prcp_3day_avg_mm": 52.83,
+        "prcp_7day_cumulative_mm": 201.46,
+        "upstream_discharge_m3s": 9718.7,
+        "soil_saturation_index": 0.345,
+        "humidity_avg_pct": 50.1,
+        "temp_range_c": 12.6,
+        "antecedent_moisture_index": 0.32
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0200",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2003-03-24",
+      "features": {
+        "prcp_3day_avg_mm": 21.86,
+        "prcp_7day_cumulative_mm": 90.51,
+        "upstream_discharge_m3s": 8126.7,
+        "soil_saturation_index": 0.546,
+        "humidity_avg_pct": 45.5,
+        "temp_range_c": 16.4,
+        "antecedent_moisture_index": 0.122
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0201",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2022-01-25",
+      "features": {
+        "prcp_3day_avg_mm": 0.26,
+        "prcp_7day_cumulative_mm": 0.77,
+        "upstream_discharge_m3s": 3942.2,
+        "soil_saturation_index": 0.177,
+        "humidity_avg_pct": 44.1,
+        "temp_range_c": 12.6,
+        "antecedent_moisture_index": 0.118
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0202",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2020-10-16",
+      "features": {
+        "prcp_3day_avg_mm": 26.37,
+        "prcp_7day_cumulative_mm": 74.46,
+        "upstream_discharge_m3s": 8046.6,
+        "soil_saturation_index": 0.315,
+        "humidity_avg_pct": 40.5,
+        "temp_range_c": 13.4,
+        "antecedent_moisture_index": 0.186
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0203",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2015-07-26",
+      "features": {
+        "prcp_3day_avg_mm": 52.62,
+        "prcp_7day_cumulative_mm": 165.1,
+        "upstream_discharge_m3s": 9367.1,
+        "soil_saturation_index": 0.36,
+        "humidity_avg_pct": 45.4,
+        "temp_range_c": 10.5,
+        "antecedent_moisture_index": 0.206
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0204",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2013-02-12",
+      "features": {
+        "prcp_3day_avg_mm": 38.37,
+        "prcp_7day_cumulative_mm": 123.56,
+        "upstream_discharge_m3s": 6890.5,
+        "soil_saturation_index": 0.429,
+        "humidity_avg_pct": 53.8,
+        "temp_range_c": 8.8,
+        "antecedent_moisture_index": 0.398
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0205",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2000-02-13",
+      "features": {
+        "prcp_3day_avg_mm": 15.17,
+        "prcp_7day_cumulative_mm": 46.12,
+        "upstream_discharge_m3s": 3774.2,
+        "soil_saturation_index": 0.154,
+        "humidity_avg_pct": 56.6,
+        "temp_range_c": 12.3,
+        "antecedent_moisture_index": 0.335
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0206",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2001-09-02",
+      "features": {
+        "prcp_3day_avg_mm": 12.87,
+        "prcp_7day_cumulative_mm": 40.91,
+        "upstream_discharge_m3s": 11068.5,
+        "soil_saturation_index": 0.377,
+        "humidity_avg_pct": 67.0,
+        "temp_range_c": 14.8,
+        "antecedent_moisture_index": 0.184
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0207",
+      "location_id": "LOC_12",
+      "location_name": "Chenab at Trimmu",
+      "date": "2021-11-02",
+      "features": {
+        "prcp_3day_avg_mm": 7.17,
+        "prcp_7day_cumulative_mm": 21.54,
+        "upstream_discharge_m3s": 5215.3,
+        "soil_saturation_index": 0.233,
+        "humidity_avg_pct": 65.5,
+        "temp_range_c": 16.2,
+        "antecedent_moisture_index": 0.379
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0208",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2012-07-19",
+      "features": {
+        "prcp_3day_avg_mm": 169.23,
+        "prcp_7day_cumulative_mm": 552.45,
+        "upstream_discharge_m3s": 33187.3,
+        "soil_saturation_index": 0.956,
+        "humidity_avg_pct": 91.7,
+        "temp_range_c": 9.4,
+        "antecedent_moisture_index": 0.892
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0209",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2010-09-24",
+      "features": {
+        "prcp_3day_avg_mm": 343.89,
+        "prcp_7day_cumulative_mm": 1126.87,
+        "upstream_discharge_m3s": 34813.7,
+        "soil_saturation_index": 0.943,
+        "humidity_avg_pct": 76.1,
+        "temp_range_c": 17.5,
+        "antecedent_moisture_index": 0.478
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0210",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2010-09-09",
+      "features": {
+        "prcp_3day_avg_mm": 298.48,
+        "prcp_7day_cumulative_mm": 992.64,
+        "upstream_discharge_m3s": 11843.5,
+        "soil_saturation_index": 0.877,
+        "humidity_avg_pct": 84.0,
+        "temp_range_c": 13.9,
+        "antecedent_moisture_index": 0.466
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0211",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2012-07-23",
+      "features": {
+        "prcp_3day_avg_mm": 129.49,
+        "prcp_7day_cumulative_mm": 390.55,
+        "upstream_discharge_m3s": 20342.0,
+        "soil_saturation_index": 0.93,
+        "humidity_avg_pct": 80.4,
+        "temp_range_c": 11.6,
+        "antecedent_moisture_index": 0.264
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0212",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2014-08-25",
+      "features": {
+        "prcp_3day_avg_mm": 176.2,
+        "prcp_7day_cumulative_mm": 630.22,
+        "upstream_discharge_m3s": 18049.7,
+        "soil_saturation_index": 0.853,
+        "humidity_avg_pct": 77.7,
+        "temp_range_c": 8.3,
+        "antecedent_moisture_index": 0.448
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0213",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2015-09-26",
+      "features": {
+        "prcp_3day_avg_mm": 189.21,
+        "prcp_7day_cumulative_mm": 552.24,
+        "upstream_discharge_m3s": 35562.5,
+        "soil_saturation_index": 0.839,
+        "humidity_avg_pct": 82.7,
+        "temp_range_c": 17.1,
+        "antecedent_moisture_index": 0.885
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0214",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2015-07-22",
+      "features": {
+        "prcp_3day_avg_mm": 202.61,
+        "prcp_7day_cumulative_mm": 585.27,
+        "upstream_discharge_m3s": 20644.9,
+        "soil_saturation_index": 0.863,
+        "humidity_avg_pct": 77.8,
+        "temp_range_c": 12.2,
+        "antecedent_moisture_index": 0.539
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0215",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2012-08-08",
+      "features": {
+        "prcp_3day_avg_mm": 283.57,
+        "prcp_7day_cumulative_mm": 847.8,
+        "upstream_discharge_m3s": 8356.9,
+        "soil_saturation_index": 0.855,
+        "humidity_avg_pct": 84.9,
+        "temp_range_c": 12.0,
+        "antecedent_moisture_index": 0.789
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0216",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2009-08-11",
+      "features": {
+        "prcp_3day_avg_mm": 24.11,
+        "prcp_7day_cumulative_mm": 77.66,
+        "upstream_discharge_m3s": 7676.5,
+        "soil_saturation_index": 0.388,
+        "humidity_avg_pct": 64.7,
+        "temp_range_c": 15.0,
+        "antecedent_moisture_index": 0.244
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0217",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2013-06-10",
+      "features": {
+        "prcp_3day_avg_mm": 29.39,
+        "prcp_7day_cumulative_mm": 95.72,
+        "upstream_discharge_m3s": 5655.2,
+        "soil_saturation_index": 0.463,
+        "humidity_avg_pct": 59.0,
+        "temp_range_c": 15.9,
+        "antecedent_moisture_index": 0.21
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0218",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2005-10-18",
+      "features": {
+        "prcp_3day_avg_mm": 7.2,
+        "prcp_7day_cumulative_mm": 29.65,
+        "upstream_discharge_m3s": 2125.4,
+        "soil_saturation_index": 0.441,
+        "humidity_avg_pct": 63.0,
+        "temp_range_c": 16.0,
+        "antecedent_moisture_index": 0.349
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0219",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2013-11-16",
+      "features": {
+        "prcp_3day_avg_mm": 5.57,
+        "prcp_7day_cumulative_mm": 18.89,
+        "upstream_discharge_m3s": 3905.5,
+        "soil_saturation_index": 0.212,
+        "humidity_avg_pct": 49.1,
+        "temp_range_c": 12.5,
+        "antecedent_moisture_index": 0.279
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0220",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2013-09-17",
+      "features": {
+        "prcp_3day_avg_mm": 51.72,
+        "prcp_7day_cumulative_mm": 214.92,
+        "upstream_discharge_m3s": 7148.3,
+        "soil_saturation_index": 0.165,
+        "humidity_avg_pct": 66.1,
+        "temp_range_c": 16.1,
+        "antecedent_moisture_index": 0.278
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0221",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2001-04-22",
+      "features": {
+        "prcp_3day_avg_mm": 26.59,
+        "prcp_7day_cumulative_mm": 98.46,
+        "upstream_discharge_m3s": 7865.2,
+        "soil_saturation_index": 0.375,
+        "humidity_avg_pct": 45.0,
+        "temp_range_c": 17.7,
+        "antecedent_moisture_index": 0.199
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0222",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2013-02-01",
+      "features": {
+        "prcp_3day_avg_mm": 3.94,
+        "prcp_7day_cumulative_mm": 14.84,
+        "upstream_discharge_m3s": 4306.3,
+        "soil_saturation_index": 0.373,
+        "humidity_avg_pct": 46.7,
+        "temp_range_c": 11.7,
+        "antecedent_moisture_index": 0.239
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0223",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2021-12-17",
+      "features": {
+        "prcp_3day_avg_mm": 6.03,
+        "prcp_7day_cumulative_mm": 24.65,
+        "upstream_discharge_m3s": 2395.3,
+        "soil_saturation_index": 0.268,
+        "humidity_avg_pct": 69.9,
+        "temp_range_c": 16.3,
+        "antecedent_moisture_index": 0.319
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0224",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2007-06-15",
+      "features": {
+        "prcp_3day_avg_mm": 31.37,
+        "prcp_7day_cumulative_mm": 119.55,
+        "upstream_discharge_m3s": 4853.0,
+        "soil_saturation_index": 0.189,
+        "humidity_avg_pct": 55.6,
+        "temp_range_c": 8.7,
+        "antecedent_moisture_index": 0.113
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0225",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2001-01-28",
+      "features": {
+        "prcp_3day_avg_mm": 13.72,
+        "prcp_7day_cumulative_mm": 52.65,
+        "upstream_discharge_m3s": 7589.8,
+        "soil_saturation_index": 0.522,
+        "humidity_avg_pct": 43.3,
+        "temp_range_c": 13.5,
+        "antecedent_moisture_index": 0.199
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0226",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2017-04-26",
+      "features": {
+        "prcp_3day_avg_mm": 16.2,
+        "prcp_7day_cumulative_mm": 46.03,
+        "upstream_discharge_m3s": 7720.5,
+        "soil_saturation_index": 0.323,
+        "humidity_avg_pct": 45.5,
+        "temp_range_c": 10.0,
+        "antecedent_moisture_index": 0.278
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0227",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2000-12-07",
+      "features": {
+        "prcp_3day_avg_mm": 8.23,
+        "prcp_7day_cumulative_mm": 24.22,
+        "upstream_discharge_m3s": 11428.5,
+        "soil_saturation_index": 0.175,
+        "humidity_avg_pct": 62.6,
+        "temp_range_c": 9.9,
+        "antecedent_moisture_index": 0.198
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0228",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2001-05-22",
+      "features": {
+        "prcp_3day_avg_mm": 34.51,
+        "prcp_7day_cumulative_mm": 126.15,
+        "upstream_discharge_m3s": 7455.9,
+        "soil_saturation_index": 0.389,
+        "humidity_avg_pct": 55.8,
+        "temp_range_c": 11.5,
+        "antecedent_moisture_index": 0.354
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0229",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2003-11-23",
+      "features": {
+        "prcp_3day_avg_mm": 32.02,
+        "prcp_7day_cumulative_mm": 103.71,
+        "upstream_discharge_m3s": 4004.7,
+        "soil_saturation_index": 0.419,
+        "humidity_avg_pct": 67.6,
+        "temp_range_c": 9.2,
+        "antecedent_moisture_index": 0.212
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0230",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2019-07-14",
+      "features": {
+        "prcp_3day_avg_mm": 33.4,
+        "prcp_7day_cumulative_mm": 118.65,
+        "upstream_discharge_m3s": 8909.9,
+        "soil_saturation_index": 0.345,
+        "humidity_avg_pct": 57.2,
+        "temp_range_c": 17.3,
+        "antecedent_moisture_index": 0.152
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0231",
+      "location_id": "LOC_13",
+      "location_name": "Ravi at Balloki",
+      "date": "2017-05-05",
+      "features": {
+        "prcp_3day_avg_mm": 7.48,
+        "prcp_7day_cumulative_mm": 30.93,
+        "upstream_discharge_m3s": 6391.4,
+        "soil_saturation_index": 0.496,
+        "humidity_avg_pct": 65.3,
+        "temp_range_c": 10.0,
+        "antecedent_moisture_index": 0.215
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0232",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2015-09-21",
+      "features": {
+        "prcp_3day_avg_mm": 229.8,
+        "prcp_7day_cumulative_mm": 800.67,
+        "upstream_discharge_m3s": 10003.9,
+        "soil_saturation_index": 0.943,
+        "humidity_avg_pct": 88.7,
+        "temp_range_c": 8.3,
+        "antecedent_moisture_index": 0.733
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0233",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2010-08-08",
+      "features": {
+        "prcp_3day_avg_mm": 239.95,
+        "prcp_7day_cumulative_mm": 929.16,
+        "upstream_discharge_m3s": 27314.8,
+        "soil_saturation_index": 0.921,
+        "humidity_avg_pct": 78.4,
+        "temp_range_c": 9.1,
+        "antecedent_moisture_index": 0.28
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0234",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2022-08-18",
+      "features": {
+        "prcp_3day_avg_mm": 307.78,
+        "prcp_7day_cumulative_mm": 1288.28,
+        "upstream_discharge_m3s": 12996.2,
+        "soil_saturation_index": 0.876,
+        "humidity_avg_pct": 75.8,
+        "temp_range_c": 16.3,
+        "antecedent_moisture_index": 0.726
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0235",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2022-07-15",
+      "features": {
+        "prcp_3day_avg_mm": 174.55,
+        "prcp_7day_cumulative_mm": 517.43,
+        "upstream_discharge_m3s": 27497.7,
+        "soil_saturation_index": 0.949,
+        "humidity_avg_pct": 92.2,
+        "temp_range_c": 10.1,
+        "antecedent_moisture_index": 0.716
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0236",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2012-09-20",
+      "features": {
+        "prcp_3day_avg_mm": 262.6,
+        "prcp_7day_cumulative_mm": 811.36,
+        "upstream_discharge_m3s": 7386.7,
+        "soil_saturation_index": 0.798,
+        "humidity_avg_pct": 78.3,
+        "temp_range_c": 11.5,
+        "antecedent_moisture_index": 0.397
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0237",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2011-08-23",
+      "features": {
+        "prcp_3day_avg_mm": 181.65,
+        "prcp_7day_cumulative_mm": 737.53,
+        "upstream_discharge_m3s": 49550.9,
+        "soil_saturation_index": 0.868,
+        "humidity_avg_pct": 86.5,
+        "temp_range_c": 9.4,
+        "antecedent_moisture_index": 0.725
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0238",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2010-08-28",
+      "features": {
+        "prcp_3day_avg_mm": 268.1,
+        "prcp_7day_cumulative_mm": 871.59,
+        "upstream_discharge_m3s": 12673.5,
+        "soil_saturation_index": 0.784,
+        "humidity_avg_pct": 89.0,
+        "temp_range_c": 16.4,
+        "antecedent_moisture_index": 0.475
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0239",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2015-05-21",
+      "features": {
+        "prcp_3day_avg_mm": 16.57,
+        "prcp_7day_cumulative_mm": 48.55,
+        "upstream_discharge_m3s": 6752.1,
+        "soil_saturation_index": 0.502,
+        "humidity_avg_pct": 53.6,
+        "temp_range_c": 10.8,
+        "antecedent_moisture_index": 0.381
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0240",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2017-08-11",
+      "features": {
+        "prcp_3day_avg_mm": 32.59,
+        "prcp_7day_cumulative_mm": 135.61,
+        "upstream_discharge_m3s": 9125.0,
+        "soil_saturation_index": 0.187,
+        "humidity_avg_pct": 66.1,
+        "temp_range_c": 15.0,
+        "antecedent_moisture_index": 0.355
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0241",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2019-07-07",
+      "features": {
+        "prcp_3day_avg_mm": 54.22,
+        "prcp_7day_cumulative_mm": 173.33,
+        "upstream_discharge_m3s": 6324.5,
+        "soil_saturation_index": 0.279,
+        "humidity_avg_pct": 64.7,
+        "temp_range_c": 9.3,
+        "antecedent_moisture_index": 0.356
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0242",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2009-11-25",
+      "features": {
+        "prcp_3day_avg_mm": 1.94,
+        "prcp_7day_cumulative_mm": 5.76,
+        "upstream_discharge_m3s": 11091.8,
+        "soil_saturation_index": 0.334,
+        "humidity_avg_pct": 43.0,
+        "temp_range_c": 12.4,
+        "antecedent_moisture_index": 0.1
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0243",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2005-12-05",
+      "features": {
+        "prcp_3day_avg_mm": 35.29,
+        "prcp_7day_cumulative_mm": 103.41,
+        "upstream_discharge_m3s": 6232.6,
+        "soil_saturation_index": 0.501,
+        "humidity_avg_pct": 49.1,
+        "temp_range_c": 8.8,
+        "antecedent_moisture_index": 0.299
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0244",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2003-01-13",
+      "features": {
+        "prcp_3day_avg_mm": 25.02,
+        "prcp_7day_cumulative_mm": 73.26,
+        "upstream_discharge_m3s": 3036.4,
+        "soil_saturation_index": 0.322,
+        "humidity_avg_pct": 61.8,
+        "temp_range_c": 10.1,
+        "antecedent_moisture_index": 0.123
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0245",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2005-09-22",
+      "features": {
+        "prcp_3day_avg_mm": 24.92,
+        "prcp_7day_cumulative_mm": 99.81,
+        "upstream_discharge_m3s": 6620.3,
+        "soil_saturation_index": 0.198,
+        "humidity_avg_pct": 40.2,
+        "temp_range_c": 12.8,
+        "antecedent_moisture_index": 0.169
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0246",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2001-02-11",
+      "features": {
+        "prcp_3day_avg_mm": 14.7,
+        "prcp_7day_cumulative_mm": 59.17,
+        "upstream_discharge_m3s": 6462.5,
+        "soil_saturation_index": 0.475,
+        "humidity_avg_pct": 49.0,
+        "temp_range_c": 14.8,
+        "antecedent_moisture_index": 0.121
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0247",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2000-10-21",
+      "features": {
+        "prcp_3day_avg_mm": 6.56,
+        "prcp_7day_cumulative_mm": 26.84,
+        "upstream_discharge_m3s": 5297.5,
+        "soil_saturation_index": 0.449,
+        "humidity_avg_pct": 50.5,
+        "temp_range_c": 12.4,
+        "antecedent_moisture_index": 0.165
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0248",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2003-02-19",
+      "features": {
+        "prcp_3day_avg_mm": 29.2,
+        "prcp_7day_cumulative_mm": 91.89,
+        "upstream_discharge_m3s": 6761.8,
+        "soil_saturation_index": 0.466,
+        "humidity_avg_pct": 50.5,
+        "temp_range_c": 10.5,
+        "antecedent_moisture_index": 0.28
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0249",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2021-05-25",
+      "features": {
+        "prcp_3day_avg_mm": 37.65,
+        "prcp_7day_cumulative_mm": 116.25,
+        "upstream_discharge_m3s": 8819.3,
+        "soil_saturation_index": 0.5,
+        "humidity_avg_pct": 40.8,
+        "temp_range_c": 9.9,
+        "antecedent_moisture_index": 0.218
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0250",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2000-04-16",
+      "features": {
+        "prcp_3day_avg_mm": 15.44,
+        "prcp_7day_cumulative_mm": 62.42,
+        "upstream_discharge_m3s": 2007.5,
+        "soil_saturation_index": 0.178,
+        "humidity_avg_pct": 47.2,
+        "temp_range_c": 11.6,
+        "antecedent_moisture_index": 0.195
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0251",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2021-07-12",
+      "features": {
+        "prcp_3day_avg_mm": 30.6,
+        "prcp_7day_cumulative_mm": 88.8,
+        "upstream_discharge_m3s": 6532.8,
+        "soil_saturation_index": 0.545,
+        "humidity_avg_pct": 45.2,
+        "temp_range_c": 8.1,
+        "antecedent_moisture_index": 0.165
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0252",
+      "location_id": "LOC_14",
+      "location_name": "Ravi at Sidhnai",
+      "date": "2013-09-10",
+      "features": {
+        "prcp_3day_avg_mm": 35.2,
+        "prcp_7day_cumulative_mm": 102.62,
+        "upstream_discharge_m3s": 5824.8,
+        "soil_saturation_index": 0.431,
+        "humidity_avg_pct": 55.0,
+        "temp_range_c": 14.2,
+        "antecedent_moisture_index": 0.183
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0253",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2012-07-17",
+      "features": {
+        "prcp_3day_avg_mm": 331.18,
+        "prcp_7day_cumulative_mm": 1199.21,
+        "upstream_discharge_m3s": 27822.2,
+        "soil_saturation_index": 0.825,
+        "humidity_avg_pct": 94.5,
+        "temp_range_c": 14.5,
+        "antecedent_moisture_index": 0.65
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0254",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2020-08-24",
+      "features": {
+        "prcp_3day_avg_mm": 338.92,
+        "prcp_7day_cumulative_mm": 1004.0,
+        "upstream_discharge_m3s": 25272.2,
+        "soil_saturation_index": 0.963,
+        "humidity_avg_pct": 79.8,
+        "temp_range_c": 8.6,
+        "antecedent_moisture_index": 0.666
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0255",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2020-07-04",
+      "features": {
+        "prcp_3day_avg_mm": 115.01,
+        "prcp_7day_cumulative_mm": 377.87,
+        "upstream_discharge_m3s": 18134.1,
+        "soil_saturation_index": 0.864,
+        "humidity_avg_pct": 77.7,
+        "temp_range_c": 16.2,
+        "antecedent_moisture_index": 0.381
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0256",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2011-09-25",
+      "features": {
+        "prcp_3day_avg_mm": 319.88,
+        "prcp_7day_cumulative_mm": 1045.7,
+        "upstream_discharge_m3s": 17590.5,
+        "soil_saturation_index": 0.957,
+        "humidity_avg_pct": 89.7,
+        "temp_range_c": 13.2,
+        "antecedent_moisture_index": 0.384
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0257",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2001-08-15",
+      "features": {
+        "prcp_3day_avg_mm": 28.6,
+        "prcp_7day_cumulative_mm": 86.39,
+        "upstream_discharge_m3s": 10721.7,
+        "soil_saturation_index": 0.217,
+        "humidity_avg_pct": 41.7,
+        "temp_range_c": 16.9,
+        "antecedent_moisture_index": 0.302
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0258",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2005-12-17",
+      "features": {
+        "prcp_3day_avg_mm": 0.1,
+        "prcp_7day_cumulative_mm": 0.34,
+        "upstream_discharge_m3s": 5697.5,
+        "soil_saturation_index": 0.168,
+        "humidity_avg_pct": 65.8,
+        "temp_range_c": 9.8,
+        "antecedent_moisture_index": 0.388
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0259",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2019-12-24",
+      "features": {
+        "prcp_3day_avg_mm": 26.23,
+        "prcp_7day_cumulative_mm": 85.19,
+        "upstream_discharge_m3s": 6913.0,
+        "soil_saturation_index": 0.516,
+        "humidity_avg_pct": 46.7,
+        "temp_range_c": 13.7,
+        "antecedent_moisture_index": 0.136
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0260",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2000-03-08",
+      "features": {
+        "prcp_3day_avg_mm": 32.17,
+        "prcp_7day_cumulative_mm": 111.04,
+        "upstream_discharge_m3s": 5632.6,
+        "soil_saturation_index": 0.178,
+        "humidity_avg_pct": 69.4,
+        "temp_range_c": 16.4,
+        "antecedent_moisture_index": 0.198
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0261",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2017-01-12",
+      "features": {
+        "prcp_3day_avg_mm": 8.03,
+        "prcp_7day_cumulative_mm": 27.69,
+        "upstream_discharge_m3s": 5642.7,
+        "soil_saturation_index": 0.399,
+        "humidity_avg_pct": 56.9,
+        "temp_range_c": 12.9,
+        "antecedent_moisture_index": 0.332
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0262",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2019-04-05",
+      "features": {
+        "prcp_3day_avg_mm": 0.26,
+        "prcp_7day_cumulative_mm": 1.01,
+        "upstream_discharge_m3s": 7142.9,
+        "soil_saturation_index": 0.289,
+        "humidity_avg_pct": 52.3,
+        "temp_range_c": 17.5,
+        "antecedent_moisture_index": 0.1
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0263",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2013-12-24",
+      "features": {
+        "prcp_3day_avg_mm": 12.3,
+        "prcp_7day_cumulative_mm": 50.99,
+        "upstream_discharge_m3s": 13932.1,
+        "soil_saturation_index": 0.318,
+        "humidity_avg_pct": 46.2,
+        "temp_range_c": 9.4,
+        "antecedent_moisture_index": 0.184
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0264",
+      "location_id": "LOC_15",
+      "location_name": "Sutlej at Islam",
+      "date": "2005-09-14",
+      "features": {
+        "prcp_3day_avg_mm": 39.25,
+        "prcp_7day_cumulative_mm": 115.14,
+        "upstream_discharge_m3s": 3942.8,
+        "soil_saturation_index": 0.184,
+        "humidity_avg_pct": 51.2,
+        "temp_range_c": 16.2,
+        "antecedent_moisture_index": 0.122
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0265",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2015-07-14",
+      "features": {
+        "prcp_3day_avg_mm": 269.66,
+        "prcp_7day_cumulative_mm": 1104.66,
+        "upstream_discharge_m3s": 24891.8,
+        "soil_saturation_index": 0.946,
+        "humidity_avg_pct": 77.6,
+        "temp_range_c": 16.3,
+        "antecedent_moisture_index": 0.428
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0266",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2012-07-03",
+      "features": {
+        "prcp_3day_avg_mm": 336.57,
+        "prcp_7day_cumulative_mm": 992.17,
+        "upstream_discharge_m3s": 37369.4,
+        "soil_saturation_index": 0.775,
+        "humidity_avg_pct": 77.7,
+        "temp_range_c": 11.1,
+        "antecedent_moisture_index": 0.285
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0267",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2022-07-15",
+      "features": {
+        "prcp_3day_avg_mm": 185.38,
+        "prcp_7day_cumulative_mm": 697.11,
+        "upstream_discharge_m3s": 37357.6,
+        "soil_saturation_index": 0.786,
+        "humidity_avg_pct": 80.3,
+        "temp_range_c": 15.0,
+        "antecedent_moisture_index": 0.228
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0268",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2011-07-23",
+      "features": {
+        "prcp_3day_avg_mm": 171.08,
+        "prcp_7day_cumulative_mm": 541.32,
+        "upstream_discharge_m3s": 58566.3,
+        "soil_saturation_index": 0.906,
+        "humidity_avg_pct": 82.1,
+        "temp_range_c": 8.3,
+        "antecedent_moisture_index": 0.483
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0269",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2015-09-18",
+      "features": {
+        "prcp_3day_avg_mm": 171.46,
+        "prcp_7day_cumulative_mm": 482.97,
+        "upstream_discharge_m3s": 60407.3,
+        "soil_saturation_index": 0.782,
+        "humidity_avg_pct": 84.2,
+        "temp_range_c": 17.8,
+        "antecedent_moisture_index": 0.292
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0270",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2012-09-21",
+      "features": {
+        "prcp_3day_avg_mm": 335.14,
+        "prcp_7day_cumulative_mm": 973.58,
+        "upstream_discharge_m3s": 61712.3,
+        "soil_saturation_index": 0.961,
+        "humidity_avg_pct": 76.7,
+        "temp_range_c": 10.0,
+        "antecedent_moisture_index": 0.652
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0271",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2010-08-04",
+      "features": {
+        "prcp_3day_avg_mm": 122.16,
+        "prcp_7day_cumulative_mm": 482.58,
+        "upstream_discharge_m3s": 22585.9,
+        "soil_saturation_index": 0.882,
+        "humidity_avg_pct": 84.2,
+        "temp_range_c": 8.3,
+        "antecedent_moisture_index": 0.678
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "MODERATE"
+    },
+    {
+      "sample_id": "TRAIN_0272",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2012-07-06",
+      "features": {
+        "prcp_3day_avg_mm": 177.45,
+        "prcp_7day_cumulative_mm": 650.12,
+        "upstream_discharge_m3s": 31629.3,
+        "soil_saturation_index": 0.891,
+        "humidity_avg_pct": 83.9,
+        "temp_range_c": 13.0,
+        "antecedent_moisture_index": 0.818
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0273",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2010-07-09",
+      "features": {
+        "prcp_3day_avg_mm": 203.16,
+        "prcp_7day_cumulative_mm": 639.7,
+        "upstream_discharge_m3s": 63747.8,
+        "soil_saturation_index": 0.933,
+        "humidity_avg_pct": 83.4,
+        "temp_range_c": 13.4,
+        "antecedent_moisture_index": 0.214
+      },
+      "label": 1,
+      "label_text": "FLOOD",
+      "severity": "SEVERE"
+    },
+    {
+      "sample_id": "TRAIN_0274",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2009-08-18",
+      "features": {
+        "prcp_3day_avg_mm": 43.76,
+        "prcp_7day_cumulative_mm": 139.1,
+        "upstream_discharge_m3s": 2633.1,
+        "soil_saturation_index": 0.279,
+        "humidity_avg_pct": 50.3,
+        "temp_range_c": 14.0,
+        "antecedent_moisture_index": 0.109
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0275",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2007-01-26",
+      "features": {
+        "prcp_3day_avg_mm": 39.66,
+        "prcp_7day_cumulative_mm": 165.13,
+        "upstream_discharge_m3s": 4045.3,
+        "soil_saturation_index": 0.55,
+        "humidity_avg_pct": 55.9,
+        "temp_range_c": 14.6,
+        "antecedent_moisture_index": 0.18
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0276",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2000-04-19",
+      "features": {
+        "prcp_3day_avg_mm": 33.86,
+        "prcp_7day_cumulative_mm": 134.88,
+        "upstream_discharge_m3s": 3659.0,
+        "soil_saturation_index": 0.486,
+        "humidity_avg_pct": 63.9,
+        "temp_range_c": 13.9,
+        "antecedent_moisture_index": 0.342
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0277",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2009-10-01",
+      "features": {
+        "prcp_3day_avg_mm": 28.14,
+        "prcp_7day_cumulative_mm": 116.15,
+        "upstream_discharge_m3s": 12093.7,
+        "soil_saturation_index": 0.207,
+        "humidity_avg_pct": 50.6,
+        "temp_range_c": 16.1,
+        "antecedent_moisture_index": 0.391
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0278",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2007-03-16",
+      "features": {
+        "prcp_3day_avg_mm": 1.52,
+        "prcp_7day_cumulative_mm": 5.27,
+        "upstream_discharge_m3s": 6367.6,
+        "soil_saturation_index": 0.158,
+        "humidity_avg_pct": 41.7,
+        "temp_range_c": 14.1,
+        "antecedent_moisture_index": 0.342
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0279",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2003-06-02",
+      "features": {
+        "prcp_3day_avg_mm": 0.88,
+        "prcp_7day_cumulative_mm": 3.49,
+        "upstream_discharge_m3s": 15747.5,
+        "soil_saturation_index": 0.46,
+        "humidity_avg_pct": 57.6,
+        "temp_range_c": 17.6,
+        "antecedent_moisture_index": 0.212
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0280",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2013-10-04",
+      "features": {
+        "prcp_3day_avg_mm": 13.46,
+        "prcp_7day_cumulative_mm": 45.93,
+        "upstream_discharge_m3s": 12908.2,
+        "soil_saturation_index": 0.443,
+        "humidity_avg_pct": 49.7,
+        "temp_range_c": 12.9,
+        "antecedent_moisture_index": 0.195
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0281",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2019-12-20",
+      "features": {
+        "prcp_3day_avg_mm": 31.48,
+        "prcp_7day_cumulative_mm": 101.67,
+        "upstream_discharge_m3s": 10537.1,
+        "soil_saturation_index": 0.22,
+        "humidity_avg_pct": 46.7,
+        "temp_range_c": 9.3,
+        "antecedent_moisture_index": 0.319
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0282",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2021-07-28",
+      "features": {
+        "prcp_3day_avg_mm": 55.68,
+        "prcp_7day_cumulative_mm": 227.7,
+        "upstream_discharge_m3s": 7933.0,
+        "soil_saturation_index": 0.391,
+        "humidity_avg_pct": 69.0,
+        "temp_range_c": 10.2,
+        "antecedent_moisture_index": 0.27
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0283",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2003-06-24",
+      "features": {
+        "prcp_3day_avg_mm": 3.11,
+        "prcp_7day_cumulative_mm": 12.91,
+        "upstream_discharge_m3s": 9611.4,
+        "soil_saturation_index": 0.404,
+        "humidity_avg_pct": 50.4,
+        "temp_range_c": 14.7,
+        "antecedent_moisture_index": 0.319
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0284",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2017-01-09",
+      "features": {
+        "prcp_3day_avg_mm": 8.39,
+        "prcp_7day_cumulative_mm": 31.94,
+        "upstream_discharge_m3s": 2404.4,
+        "soil_saturation_index": 0.465,
+        "humidity_avg_pct": 60.8,
+        "temp_range_c": 12.4,
+        "antecedent_moisture_index": 0.226
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0285",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2013-08-13",
+      "features": {
+        "prcp_3day_avg_mm": 19.67,
+        "prcp_7day_cumulative_mm": 70.99,
+        "upstream_discharge_m3s": 13455.8,
+        "soil_saturation_index": 0.465,
+        "humidity_avg_pct": 51.3,
+        "temp_range_c": 10.3,
+        "antecedent_moisture_index": 0.235
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0286",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2000-05-01",
+      "features": {
+        "prcp_3day_avg_mm": 12.75,
+        "prcp_7day_cumulative_mm": 42.4,
+        "upstream_discharge_m3s": 6687.2,
+        "soil_saturation_index": 0.218,
+        "humidity_avg_pct": 68.5,
+        "temp_range_c": 13.5,
+        "antecedent_moisture_index": 0.369
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0287",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2009-10-20",
+      "features": {
+        "prcp_3day_avg_mm": 35.73,
+        "prcp_7day_cumulative_mm": 130.42,
+        "upstream_discharge_m3s": 6611.6,
+        "soil_saturation_index": 0.411,
+        "humidity_avg_pct": 61.1,
+        "temp_range_c": 8.5,
+        "antecedent_moisture_index": 0.199
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0288",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2013-12-18",
+      "features": {
+        "prcp_3day_avg_mm": 28.88,
+        "prcp_7day_cumulative_mm": 90.47,
+        "upstream_discharge_m3s": 2225.2,
+        "soil_saturation_index": 0.263,
+        "humidity_avg_pct": 61.9,
+        "temp_range_c": 13.7,
+        "antecedent_moisture_index": 0.352
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0289",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2000-06-01",
+      "features": {
+        "prcp_3day_avg_mm": 17.1,
+        "prcp_7day_cumulative_mm": 52.67,
+        "upstream_discharge_m3s": 2827.2,
+        "soil_saturation_index": 0.39,
+        "humidity_avg_pct": 48.8,
+        "temp_range_c": 9.7,
+        "antecedent_moisture_index": 0.188
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0290",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2017-02-10",
+      "features": {
+        "prcp_3day_avg_mm": 31.4,
+        "prcp_7day_cumulative_mm": 116.12,
+        "upstream_discharge_m3s": 8603.4,
+        "soil_saturation_index": 0.256,
+        "humidity_avg_pct": 54.1,
+        "temp_range_c": 11.7,
+        "antecedent_moisture_index": 0.214
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    },
+    {
+      "sample_id": "TRAIN_0291",
+      "location_id": "LOC_16",
+      "location_name": "Indus at Chachran",
+      "date": "2017-01-09",
+      "features": {
+        "prcp_3day_avg_mm": 17.59,
+        "prcp_7day_cumulative_mm": 52.97,
+        "upstream_discharge_m3s": 12655.9,
+        "soil_saturation_index": 0.376,
+        "humidity_avg_pct": 47.9,
+        "temp_range_c": 9.0,
+        "antecedent_moisture_index": 0.3
+      },
+      "label": 0,
+      "label_text": "NO_FLOOD",
+      "severity": null
+    }
+  ]
+}
